@@ -1496,9 +1496,9 @@
                                       gap: 0.05em;
                                     }
 
-                                    .gift-card {
+                                                               .gift-card {
                                       background: #fff;
-                                      padding: 4.5% 5% 5%;
+                                      padding: 6% 6% 6%;
                                       border-radius: 28px;
                                       text-align: center;
                                       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
@@ -1507,7 +1507,8 @@
                                       flex: 1;
                                       display: flex;
                                       flex-direction: column;
-                                      justify-content: center;
+                                      justify-content: space-evenly;
+                                      gap: 0.4em;
                                     }
 
                                     .secao-presentes.is-visible .gift-card {
@@ -1533,10 +1534,10 @@
                                       letter-spacing: 0.02em;
                                       text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
                                     }
-                                    .gift-copy {
-                                      font-size: clamp(14px, 3vw, 20px);
-                                      line-height: 1.3;
-                                      margin: 0.05em 0;
+                                                                   .gift-copy {
+                                      font-size: clamp(15px, 3.4vw, 22px);
+                                      line-height: 1.6;
+                                      margin: 0.3em 0;
                                     }
 
                                                    .btn-contact {
@@ -1566,10 +1567,10 @@
                                       transform: scale(0.95);
                                     }
 
-                                    .gift-footer {
-                                      font-size: clamp(13px, 2.6vw, 18px);
-                                      line-height: 1.3;
-                                      margin-top: 0.15em;
+                                   .gift-footer {
+                                      font-size: clamp(14px, 2.8vw, 19px);
+                                      line-height: 1.5;
+                                      margin-top: 0.5em;
                                     }
 
                                     .signature {
@@ -2006,6 +2007,27 @@
 }
 #botaoMusica:active {
   transform: scale(0.95);
+}
+
+/* ===== TAMANHO BASE UNIFICADO PARA TEXTOS DE CORPO ===== */
+.referencia,
+.texto-final-noivos,
+.pais-overlay,
+.blessing,
+.parents,
+.invitation,
+.save-date,
+.event-place,
+.event-desc,
+.message,
+.rsvp-desc,
+.note,
+.dress-copy,
+.gift-copy,
+.gift-footer,
+.congrats-text {
+  font-size: clamp(20px, 5.2vw, 38px);
+  line-height: 1.4;
 }
     </style>
   </head>
