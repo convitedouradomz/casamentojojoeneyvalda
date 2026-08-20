@@ -1,0 +1,3001 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Neyvalda & Jorge · 10.10.2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+                                    /* ===== RESET & BASE ===== */
+                                    * {
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                      padding: 0;
+                                    }
+
+                                    html {
+                                      scroll-behavior: smooth;
+                                      background: #ece9e3;
+                                    }
+
+                                    body {
+                                      margin: 0;
+                                      padding: 20px 12px;
+                                      min-height: 100vh;
+                                      background: #ece9e3;
+                                      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+                                      color: #1e1a16;
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                    }
+
+                                    .convite-wrapper {
+                                      width: 100%;
+                                      max-width: 460px;
+                                      margin: 0 auto;
+                                      display: flex;
+                                      flex-direction: column;
+                                      gap: 0;
+                                    }
+
+                                    .page-inicial {
+                                      margin-bottom: 15px;
+                                    }
+
+                                    .secao-versiculo-noivos {
+                                      margin-bottom: 15px;
+                                    }
+
+                                    /* ===== SECÇÕES ===== */
+                                    .secao {
+                                      position: relative;
+                                      width: 100%;
+                                      background: #f5f2ec;
+                                      border-radius: 24px;
+                                      overflow: hidden;
+                                      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
+                                      aspect-ratio: 9 / 16;
+                                      display: flex;
+                                      flex-direction: column;
+                                      padding: 5.5% 5% 4.5%;
+                                    }
+
+                                    .conteudo-secao {
+                                      width: 100%;
+                                      height: 100%;
+                                      display: flex;
+                                      flex-direction: column;
+                                      position: relative;
+                                    }
+
+                                    /* ===== TIPOGRAFIA GLOBAL ===== */
+                                    h2 {
+                                      font-family: "Great Vibes", cursive;
+                                      font-weight: 400;
+                                      font-size: clamp(40px, 9.5vw, 58px);
+                                      text-align: center;
+                                      letter-spacing: 0.03em;
+                                      color: #1e1a16;
+                                      margin: 0 0 0.25em 0;
+                                      line-height: 1.1;
+                                      text-shadow:
+                                        0.4px 0 0 currentColor,
+                                        -0.4px 0 0 currentColor,
+                                        0 2px 10px rgba(0, 0, 0, 0.08);
+                                      position: relative;
+                                      display: block;
+                                    }
+
+                                    h2::after {
+                                      content: "";
+                                      display: block;
+                                      width: 70px;
+                                      height: 2px;
+                                      background: #c9a03d;
+                                      margin: 0.15em auto 0;
+                                      opacity: 0.7;
+                                    }
+
+                                    .subtitulo {
+                                      font-family: "Cormorant Garamond", serif;
+                                      font-weight: 500;
+                                      font-size: clamp(17px, 4vw, 28px);
+                                      text-align: center;
+                                      color: #2b241e;
+                                      margin: -0.05em 0 0.2em;
+                                      letter-spacing: 0.02em;
+                                    }
+
+                                    /* ===== PÁGINA 1 — FOTO DIVIDIDA ===== */
+                                    .page-inicial {
+                                      padding: 0;
+                                      background: #f5f2ec;
+                                      aspect-ratio: 9 / 16;
+                                      position: relative;
+                                      overflow: hidden;
+                                      border-radius: 24px;
+                                    }
+
+                                    .page-inicial .monogram {
+                                      position: absolute;
+                                      z-index: 20;
+                                      top: 4.6%;
+                                      left: 50%;
+                                      transform: translateX(-50%);
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(50px, 11vw, 80px);
+                                      line-height: 1;
+                                      white-space: nowrap;
+                                      color: #1e1a16;
+                                      letter-spacing: 0.04em;
+                                    }
+
+                                    .page-inicial .photo-area {
+                                      position: absolute;
+                                      inset: 0;
+                                    }
+
+                                    .page-inicial .slice {
+                                      position: absolute;
+                                      overflow: hidden;
+                                      will-change: transform;
+                                      backface-visibility: hidden;
+                                    }
+
+                                    .page-inicial .slice img {
+                                      position: absolute;
+                                      object-fit: cover;
+                                      display: block;
+                                      max-width: none;
+                                      width: 100%;
+                                      height: 100%;
+                                    }
+
+                                    .page-inicial .slice.left {
+                                      left: 14.49%;
+                                      top: 13.28%;
+                                      width: 17.87%;
+                                      height: 72.66%;
+                                      transform: translateY(5%);
+                                    }
+                                    .page-inicial .slice.left img {
+                                      left: 0;
+                                      top: 0;
+                                      width: 397.43%;
+                                      height: 105.59%;
+                                    }
+
+                                    .page-inicial .slice.center {
+                                      left: 32.92%;
+                                      top: 15.63%;
+                                      width: 33.98%;
+                                      height: 74.38%;
+                                      transform: translateY(-5%);
+                                    }
+                                    .page-inicial .slice.center img {
+                                      left: -54.21%;
+                                      top: -3.16%;
+                                      width: 208.99%;
+                                      height: 103.15%;
+                                    }
+
+                                    .page-inicial .slice.right {
+                                      left: 67.55%;
+                                      top: 13.28%;
+                                      width: 17.96%;
+                                      height: 72.66%;
+                                      transform: translateY(5%);
+                                    }
+                                    .page-inicial .slice.right img {
+                                      left: -295.43%;
+                                      top: 0;
+                                      width: 395.43%;
+                                      height: 105.59%;
+                                    }
+                                    @keyframes subirSuave {
+                                      from {
+                                        transform: translateY(5%);
+                                      }
+                                      to {
+                                        transform: translateY(0);
+                                      }
+                                    }
+
+                                    @keyframes descerSuave {
+                                      from {
+                                        transform: translateY(-5%);
+                                      }
+                                      to {
+                                        transform: translateY(0);
+                                      }
+                                    }
+
+                                    .page-inicial .names {
+                                      position: absolute;
+                                      z-index: 30;
+                                      top: 44.5%;
+                                      left: 50%;
+                                      transform: translateX(-50%);
+                                      width: 100%;
+                                      text-align: center;
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(36px, 8.5vw, 62px);
+                                      color: #fff;
+                                      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+                                      letter-spacing: 0.02em;
+                                    }
+
+                                    .page-inicial .date {
+                                      position: absolute;
+                                      z-index: 30;
+                                      left: 0;
+                                      right: 0;
+                                      bottom: 3.6%;
+                                      text-align: center;
+                                      font-family: "Cormorant Garamond", serif;
+                                      font-size: clamp(22px, 6vw, 42px);
+                                      font-weight: 500;
+                                      color: #111111;
+                                      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                      letter-spacing: 0.04em;
+                                    }
+
+                                    /* ===== PÁGINA 2 — VERSÍCULO + OS NOIVOS ===== */
+                                    .secao-versiculo-noivos {
+                                      padding: 4% 5% 4%;
+                                      gap: 0;
+                                    }
+
+                                    .secao-versiculo-noivos .conteudo-secao {
+                                      gap: 0.1em;
+                                    }
+
+                                    .verso-wrapper {
+                                      text-align: center;
+                                      margin-bottom: 0.1em;
+                                      flex-shrink: 0;
+                                    }
+
+                                    .verso {
+                                      font-size: clamp(20px, 5.2vw, 38px);
+                                      line-height: 1.4;
+                                      font-weight: 500;
+                                      color: #1e1a16;
+                                      margin: 0;
+                                      opacity: 0;
+                                      clip-path: inset(100% 0 0 0);
+                                    }
+
+                                    .referencia {
+                                      display: block;
+                                      margin-top: 0.3em;
+                                      font-size: 0.85em;
+                                      font-weight: 500;
+                                      opacity: 0;
+                                      transform: translateY(10px);
+                                      color: #3d322b;
+                                    }
+
+                                    .secao-versiculo-noivos.is-visible .verso {
+                                      animation: revelarVertical 1.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s
+                                        forwards;
+                                    }
+
+                                    .secao-versiculo-noivos.is-visible .referencia {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.85s forwards;
+                                    }
+
+                                    @keyframes revelarVertical {
+                                      from {
+                                        opacity: 0;
+                                        clip-path: inset(100% 0 0 0);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        clip-path: inset(0 0 0 0);
+                                      }
+                                    }
+
+                                    @keyframes fadeUp {
+                                      from {
+                                        opacity: 0;
+                                        transform: translateY(16px);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                      }
+                                    }
+
+                                    /* — Foto dos noivos (arco) — */
+                                    .photo-card-arco {
+                          position: relative;
+                          width: 100%;
+                          flex: 1;
+                          min-height: 0;
+                          border-radius: 60px 60px 30px 30px;
+                          overflow: hidden;
+                          background: #f0ebe3;
+                          margin-top: 0.1em;
+                          aspect-ratio: 1 / 1.05;
+                          opacity: 0;
+                          clip-path: inset(100% 0 0 0 round 60px 60px 30px 30px);
+                        }
+
+                                    .secao-versiculo-noivos.is-visible .photo-card-arco,
+                                    .secao-noivos.is-visible .photo-card-arco {
+                                      animation: revelarFoto 2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.6s
+                                        forwards;
+                                    }
+
+                                  @keyframes revelarFoto {
+                          from {
+                            opacity: 0;
+                            clip-path: inset(100% 0 0 0 round 60px 60px 30px 30px);
+                          }
+                          to {
+                            opacity: 1;
+                            clip-path: inset(0 0 0 0 round 60px 60px 30px 30px);
+                          }
+                        }
+                        .secao-noivos .photo-card-arco {
+                          border-radius: 190px 190px 30px 30px;
+                          clip-path: inset(100% 0 0 0 round 190px 190px 30px 30px);
+                        }
+
+                        .secao-noivos.is-visible .photo-card-arco {
+                          animation: revelarFotoArco 2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.6s forwards;
+                        }
+
+                        @keyframes revelarFotoArco {
+                          from {
+                            opacity: 0;
+                            clip-path: inset(100% 0 0 0 round 190px 190px 30px 30px);
+                          }
+                          to {
+                            opacity: 1;
+                            clip-path: inset(0 0 0 0 round 190px 190px 30px 30px);
+                          }
+                        }
+
+                                    .photo-card-arco img {
+                                      width: 100%;
+                                      height: 100%;
+                                      object-fit: cover;
+                                      display: block;
+                                      filter: brightness(0.98) contrast(1.02);
+                                    }
+
+                                    .overlay-info-noivos {
+                                      position: absolute;
+                                      inset: 0;
+                                      display: flex;
+                                      flex-direction: column;
+                                      align-items: center;
+                                      justify-content: flex-end;
+                                      gap: 8px;
+                                      padding: 5% 7% 8%;
+                                      background: linear-gradient(
+                                        180deg,
+                                        rgba(0, 0, 0, 0.02) 0%,
+                                        rgba(0, 0, 0, 0.55) 100%
+                                      );
+                                      color: #fff;
+                                      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+                                    }
+
+                                    .noiva,
+                                    .noivo {
+                                      display: flex;
+                                      flex-direction: column;
+                                      align-items: center;
+                                      width: 100%;
+                                      text-align: center;
+                                      opacity: 0;
+                                      transform: translateY(14px);
+                                    }
+
+                                    .secao-versiculo-noivos.is-visible .noiva,
+                                    .secao-noivos.is-visible .noiva {
+                                      animation: fadeUp 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1.2s forwards;
+                                    }
+
+                                    .secao-versiculo-noivos.is-visible .coracao-overlay,
+                                    .secao-noivos.is-visible .coracao-overlay {
+                                      animation: fadeScale 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 2.4s
+                                        forwards;
+                                            pulsarCoracao 1.5s ease-in-out 3.2s infinite;
+                              }
+
+
+                                    .secao-versiculo-noivos.is-visible .noivo,
+                                    .secao-noivos.is-visible .noivo {
+                                      animation: fadeUp 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 3.4s forwards;
+                                    }
+
+                                    @keyframes fadeScale {
+                                      from {
+                                        opacity: 0;
+                                        transform: scale(0.7);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: scale(1);
+                                      }
+                                    }
+                              @keyframes pulsarCoracao {
+                                0%, 100% {
+                                  transform: scale(1);
+                                }
+                                50% {
+                                  transform: scale(1.15);
+                                }
+                              }
+                                    .nome-overlay {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(20px, 4.8vw, 36px);
+                                      line-height: 1.1;
+                                      font-weight: 400;
+                                      letter-spacing: 0.02em;
+                                      color: #fff;
+                                      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+                                    }
+
+                                    .linha-overlay {
+                                      width: 55%;
+                                      height: 2px;
+                                      background: rgba(255, 255, 255, 0.5);
+                                      margin: 0.2em auto 0.3em;
+                                      border-radius: 2px;
+                                    }
+
+                                    .pais-overlay {
+                                      font-size: clamp(11px, 2.6vw, 18px);
+                                      line-height: 1.3;
+                                      font-weight: 400;
+                                      color: rgba(255, 255, 255, 0.9);
+                                      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+                                      margin: 0;
+                                    }
+                                    .pais-overlay strong {
+                                      font-weight: 500;
+                                      color: #fff;
+                                    }
+
+                                    .coracao-overlay {
+                                      font-size: clamp(22px, 5.5vw, 40px);
+                                      color: rgba(255, 255, 255, 0.9);
+                                      text-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+                                      opacity: 0;
+                                      transform: scale(0.7);
+                                      font-style: normal;
+                                    }
+
+                                    .texto-final-noivos {
+                                      text-align: center;
+                                      font-size: clamp(14px, 3.4vw, 24px);
+                                      line-height: 1.4;
+                                      margin-top: 0.15em;
+                                      opacity: 0;
+                                      transform: translateY(14px);
+                                      flex-shrink: 0;
+                                    }
+
+                                    .secao-versiculo-noivos.is-visible .texto-final-noivos {
+                                      animation: fadeUp 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) 1.9s forwards;
+                                    }
+
+                                    /* ===== PÁGINA 3 — PLACEHOLDER ===== */
+                                    .page-placeholder {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      color: rgba(0, 0, 0, 0.2);
+                                      font-size: clamp(18px, 4vw, 30px);
+                                      font-weight: 400;
+                                      letter-spacing: 0.04em;
+                                      text-align: center;
+                                    }
+
+                                    /* ===== PÁGINA 4 — CERIMÓNIAS ===== */
+                              .secao-cerimonias {
+                                      aspect-ratio: unset;
+                                      overflow: visible;
+                                      padding: 6% 4% 5%;
+                                    }
+
+                                    .secao-cerimonias .conteudo-secao {
+                                      gap: 0.7em;
+                                    }
+
+                                   .blessing {
+                                      font-size: clamp(18px, 4.4vw, 29px);
+                                      font-weight: 600;
+                                      font-style: italic;
+                                      text-align: center;
+                                      margin: 0 0 0.35em;
+                                      line-height: 1.4;
+                                      letter-spacing: 0.015em;
+                                      color: #2b241e;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                      position: relative;
+                                    }
+
+                                    .blessing::before {
+                                      content: "❦";
+                                      display: block;
+                                      font-size: 0.6em;
+                                      font-style: normal;
+                                      color: #c9a03d;
+                                      margin-bottom: 0.25em;
+                                      opacity: 0.8;
+                                    }
+
+                                    .parents {
+                                      display: grid;
+                                      grid-template-columns: 1fr 1fr;
+                                      gap: 4%;
+                                      font-size: clamp(12px, 3vw, 19px);
+                                      text-align: center;
+                                      line-height: 1.4;
+                                      margin: 0.35em 0 0.25em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .parents .amp {
+                                      display: block;
+                                      margin: 0.05em 0;
+                                      font-weight: 300;
+                                    }
+
+                                    .invitation {
+                                      font-size: clamp(13px, 3vw, 21px);
+                                      text-align: center;
+                                      line-height: 1.4;
+                                      margin: 0.35em 0 0.25em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .weekday {
+                                      font-weight: 600;
+                                      font-size: clamp(18px, 4.2vw, 30px);
+                                      margin-top: 0.15em;
+                                      letter-spacing: 0.06em;
+                                    }
+                                    .wedding-date {
+                                      font-size: clamp(16px, 3.8vw, 26px);
+                                      font-weight: 500;
+                                      margin: 0.08em 0 0.1em;
+                                    }
+
+                                    .save-date {
+                                      font-size: clamp(12px, 2.9vw, 19px);
+                                      text-align: center;
+                                      line-height: 1.4;
+                                      margin: 0.1em 0 0.2em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+            .secao-eventos {
+                                      aspect-ratio: unset;
+                                      overflow: visible;
+                                      padding: 6% 5% 5%;
+                                    }
+                                    .cards-cerimonias {
+                                      display: flex;
+                                      flex-direction: column;
+                                      gap: 7%;
+                                      margin: 0.1em 0 0.3em;
+                                    }
+
+                                    .event-card {
+                                      margin-bottom: 0;
+                                    }
+
+                                    .event-card:not(:last-child) {
+                                      margin-bottom: 5%;
+                                    }
+
+                                    .event-card {
+                                      background: #fff;
+                                      padding: 6% 6% 5.5%;
+                                      border-radius: 24px;
+                                      display: flex;
+                                      flex-direction: column;
+                                      align-items: center;
+                                      text-align: center;
+                                      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+                                      width: 100%;
+                                      opacity: 0;
+                                    }
+
+                                    .event-card.reveal-left {
+                                      transform: translateX(-45px);
+                                      transition:
+                                        opacity 0.85s cubic-bezier(0.22, 0.61, 0.36, 1),
+                                        transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1);
+                                    }
+
+                                    .event-card.reveal-right {
+                                      transform: translateX(45px);
+                                      transition:
+                                        opacity 0.85s cubic-bezier(0.22, 0.61, 0.36, 1),
+                                        transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1);
+                                    }
+
+                                    .event-card.show {
+                                      opacity: 1;
+                                      transform: translateX(0);
+                                    }
+
+                                    .event-icon {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      gap: 10px;
+                                      margin-bottom: 0.2em;
+                                    }
+                                    .event-icon svg {
+                                      width: 46px;
+                                      height: 46px;
+                                      fill: none;
+                                      stroke: #1e1a16;
+                                      stroke-width: 2.2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                    }
+                                    .event-title {
+              font-family: "Great Vibes", cursive;
+              font-size: clamp(26px, 6vw, 40px);
+              line-height: 1.1;
+              margin-bottom: 0.15em;
+            }
+                                   .event-place {
+              font-size: clamp(14px, 3.2vw, 20px);
+              line-height: 1.3;
+              margin: 0.1em 0;
+            }
+                                .event-desc {
+              font-size: clamp(13px, 2.8vw, 17px);
+              line-height: 1.35;
+              margin: 0.15em 0;
+              color: #3d322b;
+            }
+                                 .event-time {
+              font-size: clamp(19px, 4.2vw, 28px);
+              font-weight: 600;
+              margin: 0.1em 0;
+            }
+                                    .civil-grid {
+                                      display: grid;
+                                      grid-template-columns: 1fr 1fr;
+                                      gap: 2%;
+                                      width: 100%;
+                                      margin: 0.05em 0;
+                                    }
+                                  .civil-grid strong {
+              display: block;
+              font-size: clamp(12px, 2.6vw, 17px);
+              font-weight: 500;
+            }
+
+                                    .btn-local {
+                                      display: inline-flex;
+                                      align-items: center;
+                                      gap: 6px;
+                                      margin-top: 0.6em;
+                                      padding: 0.4em 1.2em;
+                                      background: #d9d2c9;
+                                      color: #1e1a16;
+                                      text-decoration: none;
+                                      font-size: clamp(13px, 2.8vw, 17px);
+                                      font-weight: 600;
+                                      border-radius: 40px;
+                                      transition:
+                                        background 0.25s ease,
+                                        transform 0.15s ease;
+                                      letter-spacing: 0.03em;
+                                      border: none;
+                                      cursor: pointer;
+                                      font-family: "Cormorant Garamond", serif;
+                                    }
+                                    .btn-local:hover {
+                                      background: #c9c0b5;
+                                    }
+                                    .btn-local:active {
+                                      transform: scale(0.95);
+                                    }
+
+                                    .message-title {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(22px, 5vw, 36px);
+                                      text-align: center;
+                                      margin: 1em 0 0.1em;
+                                      line-height: 1;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                      letter-spacing: 0.02em;
+                                      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
+                                    }
+                                    .message {
+                                      font-size: clamp(8px, 1.8vw, 13px);
+                                      text-align: center;
+                                      line-height: 1.3;
+                                      margin: 0;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .message strong {
+                                      display: block;
+                                      margin-top: 0.2em;
+                                      font-weight: 600;
+                                    }
+
+                                    .secao-cerimonias.is-visible .blessing {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
+                                    }
+                                    .secao-cerimonias.is-visible .parents {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+                                    }
+                                    .secao-cerimonias.is-visible .invitation {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.35s forwards;
+                                    }
+                                    .secao-cerimonias.is-visible .save-date {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.95s forwards;
+                                    }
+                                   .secao-eventos.is-visible .message-title {
+                    animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s forwards;
+                  }
+                  .secao-eventos.is-visible .message {
+                    animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.45s forwards;
+                  }
+                  .calendario-container-convite {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0.35em 0;
+                    opacity: 0;
+                    transform: translateY(16px);
+                  }
+                  .secao-cerimonias.is-visible .calendario-container-convite {
+                    animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.65s forwards;
+                  }
+
+                  .calendario-pequeno-convite {
+                    width: 100%;
+                    max-width: 360px;
+                    background: #fff;
+                    border-radius: 18px;
+                    overflow: hidden;
+                    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+                  }
+
+                  .cabecalho-calendario-convite {
+                    background: #1e1a16;
+                    color: #fff;
+                    text-align: center;
+                    padding: 12px;
+                    font-size: clamp(15px, 3.4vw, 19px);
+                    font-weight: 600;
+                    letter-spacing: 0.03em;
+                  }
+
+                  .dias-calendario-convite {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 5px;
+                    padding: 12px;
+                  }
+
+                  .dia-semana-convite {
+                    text-align: center;
+                    font-size: clamp(9px, 2.2vw, 13px);
+                    font-weight: 600;
+                    color: #7a6f63;
+                    padding-bottom: 3px;
+                  }
+
+                  .dia-numero-convite {
+                    text-align: center;
+                    font-size: clamp(11px, 2.5vw, 15px);
+                    padding: 7px 0;
+                    border-radius: 50%;
+                  }
+
+                  .dia-vazio-convite {
+                    visibility: hidden;
+                  }
+
+                  .dia-casamento-convite {
+                    background: #e21212;
+                    color: #fff;
+                    font-weight: 700;
+                    animation: pulsarDiaCasamento 1.6s infinite ease-in-out;
+                  }
+
+                  @keyframes pulsarDiaCasamento {
+                    0%, 100% {
+                      transform: scale(1);
+                      box-shadow: 0 0 0 0 rgba(226, 18, 18, 0.6);
+                    }
+                    50% {
+                      transform: scale(1.15);
+                      box-shadow: 0 0 0 5px rgba(226, 18, 18, 0);
+                    }
+                  }
+
+                  .btn-add-calendario {
+                    display: block;
+                    margin: 0.2em auto 0;
+                    padding: 0.35em 1.3em;
+                    background: #d9d2c9;
+                    color: #1e1a16;
+                    font-size: clamp(13px, 3vw, 18px);
+                    font-weight: 600;
+                    border-radius: 40px;
+                    border: none;
+                    cursor: pointer;
+                    font-family: "Cormorant Garamond", serif;
+                    letter-spacing: 0.03em;
+                    opacity: 0;
+                    transform: translateY(16px);
+                  }
+                  .secao-cerimonias.is-visible .btn-add-calendario {
+                    animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 1.05s forwards;
+                  }
+                                    /* ===== PÁGINA 5 — PROGRAMA (timeline) ===== */
+                                    .secao-programa {
+                                      padding: 4.5% 5% 4%;
+                                      overflow-y: auto;
+                                    }
+                                    .secao-programa .conteudo-secao {
+                                      gap: 0.05em;
+                                    }
+
+                                    .timeline {
+                                      position: relative;
+                                      width: 100%;
+                                      flex: 1;
+                                      margin-top: 0.1em;
+                                      min-height: 0;
+                                    }
+
+                                    .timeline::before {
+                                      content: "";
+                                      position: absolute;
+                                      top: 1.5%;
+                                      bottom: 1.5%;
+                                      left: 50%;
+                                      width: 2px;
+                                      background: #1e1a16;
+                                      transform: translateX(-50%);
+                                      opacity: 0.3;
+                                    }
+
+                                    .timeline-item {
+                                      position: absolute;
+                                      left: 0;
+                                      width: 100%;
+                                      height: 14%;
+                                      display: flex;
+                                      align-items: center;
+                                    }
+                                    .timeline-item:nth-child(1) {
+                                      top: 0%;
+                                    }
+                                    .timeline-item:nth-child(2) {
+                                      top: 16.5%;
+                                    }
+                                    .timeline-item:nth-child(3) {
+                                      top: 33%;
+                                    }
+                                    .timeline-item:nth-child(4) {
+                                      top: 49.5%;
+                                    }
+                                    .timeline-item:nth-child(5) {
+                                      top: 66%;
+                                    }
+                                    .timeline-item:nth-child(6) {
+                                      top: 82.5%;
+                                    }
+
+                                    .timeline-dot {
+                                      position: absolute;
+                                      left: 50%;
+                                      top: 50%;
+                                      width: 12px;
+                                      height: 12px;
+                                      background: #1e1a16;
+                                      border-radius: 50%;
+                                      transform: translate(-50%, -50%) scale(0.4);
+                                      opacity: 0;
+                                    }
+
+                                    .timeline-side {
+                                      position: absolute;
+                                      top: 50%;
+                                      width: 42%;
+                                      transform: translateY(-50%) translateX(0);
+                                      display: flex;
+                                      flex-direction: column;
+                                      align-items: center;
+                                      opacity: 0;
+                                    }
+
+                                    .timeline-side.left {
+                                      left: 2%;
+                                      text-align: center;
+                                      transform: translateY(-50%) translateX(-10px);
+                                    }
+                                    .timeline-side.right {
+                                      right: 2%;
+                                      text-align: center;
+                                      transform: translateY(-50%) translateX(10px);
+                                    }
+
+                                    .timeline-icon {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      height: 44px;
+                                      margin-bottom: 1px;
+                                    }
+                                    .timeline-icon svg {
+                                      width: 38px;
+                                      height: 38px;
+                                      fill: none;
+                                      stroke: #1e1a16;
+                                      stroke-width: 2.2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                    }
+
+                                    .timeline-label {
+                                      font-size: clamp(15px, 3.8vw, 26px);
+                                      line-height: 1.05;
+                                      font-weight: 500;
+                                    }
+                                    .timeline-time {
+                                      display: block;
+                                      margin-top: 0.05em;
+                                      font-size: clamp(14px, 3.4vw, 24px);
+                                      font-weight: 600;
+                                    }
+
+                                    .timeline-item.show .timeline-dot {
+                                      animation: dotRevelar 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+                                    }
+                                    .timeline-item.show .timeline-side {
+                                      animation: ladoRevelar 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.08s
+                                        forwards;
+                                    }
+
+                                    @keyframes dotRevelar {
+                                      from {
+                                        opacity: 0;
+                                        transform: translate(-50%, -50%) scale(0.4);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: translate(-50%, -50%) scale(1);
+                                      }
+                                    }
+
+                                    @keyframes ladoRevelar {
+                                      from {
+                                        opacity: 0;
+                                        transform: translateY(-50%) translateX(0);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: translateY(-50%) translateX(0);
+                                      }
+                                    }
+                                    .timeline-item.show .timeline-side.left {
+                                      animation-name: ladoRevelarEsquerda;
+                                    }
+                                    .timeline-item.show .timeline-side.right {
+                                      animation-name: ladoRevelarDireita;
+                                    }
+
+                                    @keyframes ladoRevelarEsquerda {
+                                      from {
+                                        opacity: 0;
+                                        transform: translateY(-50%) translateX(-10px);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: translateY(-50%) translateX(0);
+                                      }
+                                    }
+                                    @keyframes ladoRevelarDireita {
+                                      from {
+                                        opacity: 0;
+                                        transform: translateY(-50%) translateX(10px);
+                                      }
+                                      to {
+                                        opacity: 1;
+                                        transform: translateY(-50%) translateX(0);
+                                      }
+                                    }
+
+                                    /* ===== PÁGINA 6 — CONTADOR + RSVP ===== */
+                                                         .secao-contador-rsvp {
+                          padding: 4% 5% 3.5%;
+                          aspect-ratio: unset;
+                          overflow: visible;
+                        }
+                                    .secao-contador-rsvp .conteudo-secao {
+                                      gap: 0.05em;
+                                    }
+
+                                    .pendulo-wrapper {
+                                      width: 100%;
+                                      flex: 1;
+                                      min-height: 0;
+                                      transform-origin: top center;
+                                      animation: pendulo 4.5s ease-in-out 1.4s infinite;
+                                    }
+
+                                    @keyframes pendulo {
+                                      0%, 100% {
+                                        transform: rotate(0deg);
+                                      }
+                                      25% {
+                                        transform: rotate(-4deg);
+                                      }
+                                      75% {
+                                        transform: rotate(4deg);
+                                      }
+                                    }
+
+                                    .photo-card-contador {
+                                      position: relative;
+                                      width: 100%;
+                                      height: 100%;
+                                      border-radius: 50px 50px 25px 25px;
+                                      overflow: hidden;
+                                      background: #f0ebe3;
+                                      margin-top: 0.05em;
+                                      aspect-ratio: 1 / 1.05;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+
+                                    .secao-contador-rsvp.is-visible .photo-card-contador {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+                                    }
+
+                                    .photo-card-contador img {
+                                      width: 100%;
+                                      height: 100%;
+                                      object-fit: cover;
+                                      display: block;
+                                      filter: brightness(0.97) contrast(1.02);
+                                    }
+
+                                    .countdown-novo {
+                                      position: absolute;
+                                      inset: 0;
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: flex-end;
+                                      gap: 1.5%;
+                                      padding: 0 5% 7%;
+                                      background: linear-gradient(
+                                        0deg,
+                                        rgba(0, 0, 0, 0.3) 0%,
+                                        rgba(0, 0, 0, 0) 65%
+                                      );
+                                    }
+
+                                    .box-contador {
+                                      display: flex;
+                                      flex-direction: column;
+                                      align-items: center;
+                                      background: rgba(255, 255, 255, 0.1);
+                                      backdrop-filter: blur(4px);
+                                      -webkit-backdrop-filter: blur(4px);
+                                      padding: 1.5% 0 2.5%;
+                                      border-radius: 30px;
+                                      min-width: 0;
+                                      flex: 1;
+                                      max-width: 72px;
+                                      border: 1px solid rgba(255, 255, 255, 0.08);
+                                      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
+                                      opacity: 0;
+                                      transform: translateY(18px);
+                                    }
+
+                                    .box-contador:nth-child(1) {
+                                      transition-delay: 0.15s;
+                                    }
+                                    .box-contador:nth-child(2) {
+                                      transition-delay: 0.3s;
+                                    }
+                                    .box-contador:nth-child(3) {
+                                      transition-delay: 0.45s;
+                                    }
+                                    .box-contador:nth-child(4) {
+                                      transition-delay: 0.6s;
+                                    }
+
+                                    .secao-contador-rsvp.is-visible .box-contador {
+                                      opacity: 1;
+                                      transform: translateY(0);
+                                      transition:
+                                        opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                                        transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+                                    }
+
+                                    .number-contador {
+                                      font-family: "Cormorant Garamond", serif;
+                                      font-size: clamp(24px, 6vw, 42px);
+                                      font-weight: 700;
+                                      color: #fff;
+                                      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
+                                      line-height: 1;
+                                      letter-spacing: 0.04em;
+                                    }
+                                    .label-contador {
+                                      font-family: "Cormorant Garamond", serif;
+                                      font-size: clamp(10px, 2.4vw, 16px);
+                                      font-weight: 500;
+                                      color: rgba(255, 255, 255, 0.85);
+                                      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+                                      letter-spacing: 0.06em;
+                                      margin-top: 0.1em;
+                                    }
+
+                                    .secao-contador-rsvp.is-visible h2 {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
+                                    }
+
+                                    .guest-info {
+                                      text-align: center;
+                                      margin: 0.05em 0 0.05em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .guest-heading {
+                                      font-size: clamp(15px, 3.6vw, 26px);
+                                      font-weight: 500;
+                                      letter-spacing: 0.03em;
+                                    }
+                                    .guest-name {
+                                      font-size: clamp(17px, 4vw, 28px);
+                                      font-weight: 500;
+                                      margin-top: 0.05em;
+                                    }
+
+                                    .note {
+                                      text-align: center;
+                                      font-size: clamp(13px, 3vw, 20px);
+                                      line-height: 1.3;
+                                      margin: 0.05em 0 0.1em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .note strong {
+                                      display: block;
+                                      font-weight: 600;
+                                      margin-bottom: 0.05em;
+                                    }
+
+                                    .rsvp-card {
+                                      background: #fff;
+                                      padding: 3.5% 5% 4%;
+                                      border-radius: 28px;
+                                      text-align: center;
+                                      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+                                      margin-top: 0.05em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+
+                                    .secao-contador-rsvp.is-visible .guest-info {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.45s forwards;
+                                    }
+                                    .secao-contador-rsvp.is-visible .note {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.65s forwards;
+                                    }
+                                    .secao-contador-rsvp.is-visible .rsvp-card {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.85s forwards;
+                                    }
+
+                                    .rsvp-icon {
+                                      font-size: clamp(28px, 6.5vw, 48px);
+                                      line-height: 1;
+                                      margin-bottom: 0.05em;
+                                    }
+                                    .rsvp-title {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(26px, 6.2vw, 44px);
+                                      line-height: 1.05;
+                                      letter-spacing: 0.02em;
+                                      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
+                                    }
+
+                                    .btn-confirm {
+                                      display: inline-block;
+                                      margin-top: 0.15em;
+                                      padding: 0.25em 1.1em;
+                                      background: #d9d2c9;
+                                      color: #1e1a16;
+                                      text-decoration: none;
+                                      font-size: clamp(13px, 3vw, 20px);
+                                      font-weight: 600;
+                                      border-radius: 40px;
+                                      transition:
+                                        background 0.25s ease,
+                                        transform 0.15s ease;
+                                      font-family: "Cormorant Garamond", serif;
+                                      border: none;
+                                      cursor: pointer;
+                                      letter-spacing: 0.03em;
+                                    }
+                                    .btn-confirm:hover {
+                                      background: #c9c0b5;
+                                    }
+                                    .btn-confirm:active {
+                                      transform: scale(0.95);
+                                    }
+
+                                                .rsvp-desc {
+                          font-size: clamp(12px, 2.8vw, 18px);
+                          line-height: 1.4;
+                          margin: 0.1em 0 0.5em;
+                        }
+                        .form-rsvp {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 0.6em;
+                          margin-top: 0.3em;
+                        }
+                        .opcoes-rsvp {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 0.4em;
+                          margin-top: 0.3em;
+                        }
+                        .opcao-rsvp {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          gap: 0.5em;
+                          padding: 0.5em 0.8em;
+                          border: 1px solid #d9d2c9;
+                          border-radius: 12px;
+                          cursor: pointer;
+                          font-size: clamp(12px, 2.8vw, 17px);
+                          transition: background 0.2s ease, border-color 0.2s ease;
+                        }
+                        .opcao-rsvp:has(input:checked) {
+                          background: #faf3e3;
+                          border-color: #c9a03d;
+                        }
+                        .opcao-rsvp input {
+                          accent-color: #c9a03d;
+                          width: 18px;
+                          height: 18px;
+                          flex-shrink: 0;
+                        }
+                        .rsvp-sucesso {
+                          text-align: center;
+                          font-size: clamp(14px, 3.2vw, 20px);
+                          font-weight: 600;
+                          color: #2b6b3a;
+                          margin-top: 0.4em;
+                        }
+                        .deadline {
+                          margin-top: 0.6em;
+                          font-size: clamp(11px, 2.4vw, 17px);
+                          line-height: 1.3;
+                          text-align: center;
+                        }
+
+                                    /* ===== PÁGINA 7 — FELICITAÇÕES + DRESS CODE ===== */
+                                   .secao-felicidades {
+              padding: 4.5% 5% 4%;
+              aspect-ratio: unset;
+              overflow: visible;
+            }
+                                    .secao-felicidades .conteudo-secao {
+                                      gap: 0.05em;
+                                    }
+
+                                    .congrats {
+                                      text-align: center;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .congrats-title {
+                                      font-size: clamp(24px, 5.6vw, 40px);
+                                      font-weight: 700;
+                                      letter-spacing: 0.1em;
+                                      text-transform: uppercase;
+                                      margin: 0;
+                                      color: #1e1a16;
+                                    }
+                                    .congrats-subtitle {
+                                      font-size: clamp(17px, 4vw, 28px);
+                                      line-height: 1.2;
+                                      margin-top: 0.05em;
+                                    }
+                                    .congrats-text {
+                                      font-size: clamp(13px, 3vw, 20px);
+                                      line-height: 1.3;
+                                      margin: 0.15em auto 0.15em;
+                                      width: 92%;
+                                    }
+
+                                    .btn-wish {
+                                      display: inline-block;
+                                      padding: 0.25em 1.1em;
+                                      background: #d9d2c9;
+                                      color: #1e1a16;
+                                      text-decoration: none;
+                                      font-size: clamp(12px, 2.8vw, 19px);
+                                      font-weight: 600;
+                                      border-radius: 40px;
+                                      transition:
+                                        background 0.25s ease,
+                                        transform 0.15s ease;
+                                      font-family: "Cormorant Garamond", serif;
+                                      border: none;
+                                      cursor: pointer;
+                                      letter-spacing: 0.03em;
+                                    }
+                                    .btn-wish:hover {
+                                      background: #c9c0b5;
+                                    }
+                                    .btn-wish:active {
+                                      transform: scale(0.95);
+                                    }
+
+                                    .dress-card {
+                                      background: #fff;
+                                      padding: 3.5% 5% 4%;
+                                      border-radius: 28px;
+                                      text-align: center;
+                                      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+                                      margin-top: 0.15em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+
+                                    .secao-felicidades.is-visible .congrats {
+                                      animation: fadeUp 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
+                                    }
+                                    .secao-felicidades.is-visible .dress-card {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.35s forwards;
+                                    }
+
+                                    .dress-icon {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      gap: 6px;
+                                      margin-bottom: 0.05em;
+                                    }
+                                    .dress-icon svg {
+                                      width: 44px;
+                                      height: 44px;
+                                      fill: none;
+                                      stroke: #1e1a16;
+                                      stroke-width: 2.2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                    }
+                                    .dress-title {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(28px, 6.6vw, 46px);
+                                      line-height: 1;
+                                      margin-bottom: 0.1em;
+                                      letter-spacing: 0.02em;
+                                      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
+                                    }
+                                    .dress-copy {
+                                      font-size: clamp(12px, 2.8vw, 19px);
+                                      line-height: 1.3;
+                                      margin: 0.05em 0;
+                                    }
+                                    .color-swatches {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      gap: 0;
+                                      margin: 0.15em 0 0.05em;
+                                    }
+                                    .swatch {
+                                      width: clamp(40px, 9vw, 64px);
+                                      aspect-ratio: 1;
+                                      border-radius: 50%;
+                                      border: 2px solid #1e1a16;
+                                    }
+                                    .swatch.brown {
+                                      background: #6f4828;
+                                      margin-right: -6px;
+                                      z-index: 1;
+                                    }
+                                    .swatch.white {
+                                      background: #fff;
+                                      z-index: 2;
+                                    }
+                                    .swatch-label {
+                                      font-size: clamp(13px, 3vw, 20px);
+                                      font-weight: 500;
+                                      margin-top: 0.05em;
+                                    }
+
+                                    /* ===== PÁGINA 8 — PRESENTES ===== */
+                                                        .secao-rodape {
+                          border-radius: 0 0 24px 24px;
+                          box-shadow: none;
+                          aspect-ratio: unset;
+                          overflow: visible;
+                          padding: 8% 8% 6%;
+                          background: #1e1a16;
+                        }
+                        .rodape-conteudo {
+                          align-items: center;
+                          justify-content: center;
+                          text-align: center;
+                          gap: 0.8em;
+                        }
+                        .rodape-texto {
+                          font-size: clamp(13px, 3vw, 19px);
+                          line-height: 1.4;
+                          color: #fff;
+                        }
+                        .rodape-nomes {
+                          display: block;
+                          margin-top: 0.15em;
+                          color: #c9a03d;
+                          font-family: "Great Vibes", cursive;
+                          font-size: 1.4em;
+                        }
+                        .rodape-logo {
+                          max-width: 70px;
+                          opacity: 0.9;
+                        }
+                        .rodape-instagram {
+                          display: inline-flex;
+                          align-items: center;
+                          gap: 8px;
+                          color: #c9a03d;
+                          text-decoration: none;
+                          font-size: clamp(12px, 2.8vw, 17px);
+                          padding: 0.5em 1.3em;
+                          border: 1px solid rgba(201, 160, 61, 0.4);
+                          border-radius: 40px;
+                          background: rgba(255, 255, 255, 0.06);
+                          transition: all 0.3s ease;
+                        }
+                        .rodape-instagram:hover {
+                          background: rgba(201, 160, 61, 0.15);
+                          color: #fff;
+                        }
+                        .rodape-copyright {
+                          font-size: clamp(9px, 2vw, 13px);
+                          color: rgba(255, 255, 255, 0.55);
+                          margin-top: 0.2em;
+                        }
+                                    .secao-presentes .conteudo-secao {
+                                      gap: 0.05em;
+                                    }
+
+                                    .gift-card {
+                                      background: #fff;
+                                      padding: 4.5% 5% 5%;
+                                      border-radius: 28px;
+                                      text-align: center;
+                                      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                      flex: 1;
+                                      display: flex;
+                                      flex-direction: column;
+                                      justify-content: center;
+                                    }
+
+                                    .secao-presentes.is-visible .gift-card {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
+                                    }
+
+                                    .gift-icon svg {
+                                      width: 58px;
+                                      height: 58px;
+                                      fill: none;
+                                      stroke: #1e1a16;
+                                      stroke-width: 2.2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                      margin-bottom: 0.05em;
+                                    }
+                                    .gift-title {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(28px, 6.6vw, 46px);
+                                      line-height: 1;
+                                      margin-bottom: 0.1em;
+                                      letter-spacing: 0.02em;
+                                      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
+                                    }
+                                    .gift-copy {
+                                      font-size: clamp(12px, 2.8vw, 19px);
+                                      line-height: 1.3;
+                                      margin: 0.05em 0;
+                                    }
+
+                                    .btn-contact {
+                                      display: inline-block;
+                                      margin-top: 0.15em;
+                                      padding: 0.25em 1.1em;
+                                      background: #d9d2c9;
+                                      color: #1e1a16;
+                                      text-decoration: none;
+                                      font-size: clamp(12px, 2.8vw, 19px);
+                                      font-weight: 600;
+                                      border-radius: 40px;
+                                      transition:
+                                        background 0.25s ease,
+                                        transform 0.15s ease;
+                                      font-family: "Cormorant Garamond", serif;
+                                      border: none;
+                                      cursor: pointer;
+                                      letter-spacing: 0.03em;
+                                    }
+                                    .btn-contact:hover {
+                                      background: #c9c0b5;
+                                    }
+                                    .btn-contact:active {
+                                      transform: scale(0.95);
+                                    }
+
+                                    .gift-footer {
+                                      font-size: clamp(11px, 2.4vw, 17px);
+                                      line-height: 1.3;
+                                      margin-top: 0.15em;
+                                    }
+
+                                    .signature {
+                                      text-align: center;
+                                      margin-top: 0.15em;
+                                      opacity: 0;
+                                      transform: translateY(16px);
+                                    }
+                                    .signature-names {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(30px, 7vw, 50px);
+                                      line-height: 1;
+                                    }
+                                    .signature-date {
+                                      font-size: clamp(17px, 4vw, 28px);
+                                      font-weight: 500;
+                                      letter-spacing: 0.04em;
+                                      margin-top: 0.05em;
+                                    }
+
+                                    .secao-presentes.is-visible .signature {
+                                      animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
+                                    }
+
+                                    /* ===== RESPONSIVO ===== */
+                                    @media (max-width: 420px) {
+                                      .secao {
+                                        padding: 4% 4% 3.5%;
+                                        border-radius: 18px;
+                                      }
+                                      .secao-noivos,
+                                      .secao-cerimonias,
+                                      .secao-eventos,
+                                      .secao-programa,
+                                      .secao-contador-rsvp,
+                                      .secao-felicidades,
+                                      .secao-presentes {
+                                        border-radius: 0;
+                                        padding-top: 7%;
+                                        padding-bottom: 7%;
+                                      }
+                                      .secao-noivos {
+                                        border-radius: 18px 18px 0 0;
+                                        padding-top: 5%;
+                                      }
+                                                          .secao-rodape {
+                            border-radius: 0 0 18px 18px;
+                            padding-bottom: 5%;
+                          }
+                                      .calendario-pequeno-convite {
+                                        max-width: 260px;
+                                      }
+                            .photo-card-arco,
+                        .photo-card-contador {
+                          border-radius: 40px 40px 20px 20px;
+                        }
+                        .secao-noivos .photo-card-arco {
+                          border-radius: 140px 140px 20px 20px;
+                        }
+                                      .overlay-info-noivos {
+                                        padding: 4% 6%;
+                                      }
+                                      .countdown-novo {
+                                        padding: 0 4% 6%;
+                                        gap: 1%;
+                                      }
+                                      .box-contador {
+                                        padding: 1.5% 0 2%;
+                                        border-radius: 24px;
+                                        max-width: 60px;
+                                      }
+                                      .number-contador {
+                                        font-size: clamp(20px, 5vw, 34px);
+                                      }
+                                      .label-contador {
+                                        font-size: clamp(9px, 2vw, 13px);
+                                      }
+                                      .event-card {
+                                        padding: 3% 2% 2.5%;
+                                        border-radius: 16px;
+                                      }
+                                      .event-title {
+                                        font-size: clamp(12px, 3vw, 20px);
+                                      }
+                                      .timeline-icon svg {
+                                        width: 32px;
+                                        height: 32px;
+                                      }
+                                      .timeline-label {
+                                        font-size: clamp(13px, 3.2vw, 22px);
+                                      }
+                                      .timeline-time {
+                                        font-size: clamp(12px, 2.8vw, 19px);
+                                      }
+                                      .rsvp-card,
+                                      .dress-card,
+                                      .gift-card {
+                                        padding: 3% 4% 3.5%;
+                                        border-radius: 22px;
+                                      }
+                                      .btn-local,
+                                      .btn-confirm,
+                                      .btn-wish,
+                                      .btn-contact {
+                                        font-size: clamp(9px, 2.2vw, 14px);
+                                        padding: 0.15em 0.7em;
+                                      }
+                                    }
+
+                                    @media (max-width: 360px) {
+                                      .secao {
+                                        padding: 3% 3% 2.5%;
+                                        border-radius: 14px;
+                                      }
+                                      .page-inicial .names {
+                                        font-size: clamp(26px, 6.5vw, 40px);
+                                        top: 42%;
+                                      }
+                                      .page-inicial .date {
+                                        font-size: clamp(17px, 4.5vw, 28px);
+                                      }
+                                      .page-inicial .monogram {
+                                        font-size: clamp(36px, 8vw, 52px);
+                                      }
+                                      .overlay-info-noivos {
+                                        padding: 3% 4%;
+                                      }
+                                      .nome-overlay {
+                                        font-size: clamp(16px, 4vw, 26px);
+                                      }
+                                      .pais-overlay {
+                                        font-size: clamp(9px, 2.2vw, 14px);
+                                      }
+                                      .coracao-overlay {
+                                        font-size: clamp(16px, 4.5vw, 28px);
+                                      }
+                                    }
+
+                                    /* ===== PREFERS-REDUCED-MOTION ===== */
+                                    @media (prefers-reduced-motion: reduce) {
+                                      * {
+                                        animation-duration: 0.01ms !important;
+                                        transition-duration: 0.01ms !important;
+                                      }
+                                      .page-inicial .slice {
+                                        animation: none !important;
+                                        transform: translateY(0) !important;
+                                      }
+                                      .secao-versiculo-noivos .verso {
+                                        clip-path: none !important;
+                                        opacity: 1 !important;
+                                      }
+                                      .secao-versiculo-noivos .referencia,
+                                      .secao-versiculo-noivos .photo-card-arco,
+                                      .secao-versiculo-noivos .noiva,
+                                      .secao-versiculo-noivos .noivo,
+                                      .secao-versiculo-noivos .coracao-overlay,
+                                      .secao-versiculo-noivos .texto-final-noivos,
+                                      .secao-cerimonias .blessing,
+                                      .secao-cerimonias .parents,
+                                      .secao-cerimonias .invitation,
+                                      .secao-cerimonias .save-date,
+                                      .secao-cerimonias .message-title,
+                                      .secao-cerimonias .message,
+                                      .secao-cerimonias .event-card,
+                                      .pendulo-wrapper,
+                                      .secao-contador-rsvp .photo-card-contador,
+                                      .secao-contador-rsvp .box-contador,
+                                      .secao-contador-rsvp .guest-info,
+                                      .secao-contador-rsvp .note,
+                                      .secao-contador-rsvp .rsvp-card,
+                                      .secao-felicidades .congrats,
+                                      .secao-felicidades .dress-card,
+                                      .secao-presentes .gift-card,
+                                      .secao-presentes .signature,
+                                      .timeline-side,
+                                      .timeline-dot {
+                                        opacity: 1 !important;
+                                        transform: none !important;
+                                        clip-path: none !important;
+                                      }
+                                      .timeline-item .timeline-side {
+                                        opacity: 1 !important;
+                                        transform: translateY(-50%) translateX(0) !important;
+                                      }
+                                      .timeline-dot {
+                                        opacity: 1 !important;
+                                        transform: translate(-50%, -50%) scale(1) !important;
+                                      }
+                                    }
+                                    /* ===== PÁGINA 3 — OS NOIVOS ===== */
+                                    .secao-noivos {
+                                      opacity: 0;
+                                      transform: translateY(30px);
+                                      transition:
+                                        opacity 0.8s ease,
+                                        transform 0.8s ease;
+                                    }
+
+                                    .secao-noivos.is-visible {
+                                      opacity: 1;
+                                      transform: translateY(0);
+                                    }
+
+                                    .secao-noivos .conteudo-secao > * {
+                                      opacity: 0;
+                                      transform: translateY(20px);
+                                      transition:
+                                        opacity 0.8s ease,
+                                        transform 0.8s ease;
+                                    }
+
+                                    .secao-noivos.is-visible .conteudo-secao > *:nth-child(1) {
+                                      transition-delay: 0.05s;
+                                    }
+                                    .secao-noivos.is-visible .conteudo-secao > *:nth-child(2) {
+                                      transition-delay: 0.2s;
+                                    }
+                                    .secao-noivos.is-visible .conteudo-secao > *:nth-child(3) {
+                                      transition-delay: 0.4s;
+                                    }
+                                    .secao-noivos.is-visible .conteudo-secao > *:nth-child(4) {
+                                      transition-delay: 0.6s;
+                                    }
+
+                                    .secao-noivos.is-visible .conteudo-secao > * {
+                                      opacity: 1;
+                                      transform: translateY(0);
+                                    }
+                                    body.convite-aberto .page-inicial .slice.left,
+                                    body.convite-aberto .page-inicial .slice.right {
+                                      animation: subirSuave 2.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+                                    }
+                                    body.convite-aberto .page-inicial .slice.center {
+                                      animation: descerSuave 2.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+                                    }
+                                    .secao-noivos,
+                                    .secao-cerimonias,
+                                    .secao-eventos,
+                                    .secao-programa,
+                                    .secao-contador-rsvp,
+                                    .secao-felicidades,
+                                    .secao-presentes {
+                                      border-radius: 0;
+                                      box-shadow: none;
+                                      padding-top: 8%;
+                                      padding-bottom: 8%;
+                                    }
+
+                                    .secao-noivos {
+                                      border-radius: 24px 24px 0 0;
+                                      padding-top: 6%;
+                                    }
+
+                                    .secao-presentes {
+                                      border-radius: 0 0 24px 24px;
+                                      padding-bottom: 6%;
+                                    }
+                                    .civil-icon {
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      margin-bottom: 0.2em;
+                                    }
+                                    .civil-icon svg {
+                                      width: 34px;
+                                      height: 34px;
+                                      fill: none;
+                                      stroke: #1e1a16;
+                                      stroke-width: 2.2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                    }
+                                   .secao-felicidades.is-visible .mensagens-card-convite {
+        animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
+      }
+            .mensagens-card-convite {
+              background: #fff;
+              padding: 6% 6% 6%;
+              border-radius: 24px;
+              box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+              margin-top: 0.3em;
+              opacity: 0;
+              transform: translateY(16px);
+            }
+
+            .mensagens-intro-convite {
+              font-size: clamp(12px, 2.8vw, 18px);
+              line-height: 1.4;
+              text-align: center;
+              margin-bottom: 0.6em;
+            }
+
+            .form-mensagem-convite {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5em;
+              margin-bottom: 0.7em;
+            }
+
+            .input-group-convite {
+              display: flex;
+              flex-direction: column;
+              gap: 0.15em;
+              text-align: left;
+            }
+
+            .input-group-convite label {
+              font-size: clamp(11px, 2.4vw, 15px);
+              font-weight: 600;
+              color: #2b241e;
+            }
+
+            .input-group-convite input,
+            .input-group-convite select,
+            .input-group-convite textarea {
+              font-family: "Cormorant Garamond", serif;
+              font-size: clamp(12px, 2.8vw, 17px);
+              padding: 0.5em 0.7em;
+              border: 1px solid #d9d2c9;
+              border-radius: 10px;
+              background: #faf8f5;
+              color: #1e1a16;
+            }
+
+            .input-group-convite textarea {
+              min-height: 80px;
+              resize: vertical;
+            }
+
+            .input-group-convite input:focus,
+            .input-group-convite select:focus,
+            .input-group-convite textarea:focus {
+              outline: none;
+              border-color: #c9a03d;
+              background: #fff;
+            }
+
+            .btn-enviar-convite {
+              align-self: center;
+              padding: 0.35em 1.4em;
+              background: #d9d2c9;
+              color: #1e1a16;
+              font-size: clamp(13px, 3vw, 18px);
+              font-weight: 600;
+              border-radius: 40px;
+              border: none;
+              cursor: pointer;
+              font-family: "Cormorant Garamond", serif;
+              letter-spacing: 0.03em;
+              transition: background 0.25s ease, transform 0.15s ease;
+            }
+            .btn-enviar-convite:hover {
+              background: #c9c0b5;
+            }
+            .btn-enviar-convite:active {
+              transform: scale(0.95);
+            }
+
+            .mensagens-lista-convite {
+              display: flex;
+              flex-direction: column;
+              gap: 0.6em;
+              max-height: 340px;
+              overflow-y: auto;
+            }
+
+            .mensagem-card-convite {
+              background: #faf8f5;
+              border-radius: 14px;
+              padding: 0.7em 0.9em;
+              border-left: 3px solid #c9a03d;
+              text-align: left;
+            }
+
+            .mensagem-header-convite {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 0.3em;
+            }
+
+            .mensagem-autor-convite {
+              font-weight: 600;
+              font-size: clamp(12px, 2.8vw, 17px);
+              color: #1e1a16;
+            }
+
+            .mensagem-relacao-convite {
+              font-size: clamp(10px, 2.2vw, 14px);
+              font-style: italic;
+              color: #7a6f63;
+              background: #ece9e3;
+              padding: 0.1em 0.6em;
+              border-radius: 40px;
+            }
+
+            .mensagem-texto-convite {
+              font-size: clamp(12px, 2.6vw, 16px);
+              line-height: 1.4;
+              color: #2b241e;
+              font-style: italic;
+            }
+
+            .mensagem-data-convite {
+              text-align: right;
+              font-size: clamp(9px, 2vw, 12px);
+              color: #7a6f63;
+              margin-top: 0.3em;
+            }
+
+            .sem-mensagens-convite {
+              text-align: center;
+              padding: 1em;
+              font-size: clamp(12px, 2.8vw, 17px);
+              font-style: italic;
+              color: #7a6f63;
+            }
+    </style>
+  </head>
+  <body>
+    <!-- ===== CAPA (estilo Sara & Bento) ===== -->
+    <section
+      id="capa"
+      class="secao visivel"
+      style="
+        background-color: #1e1a16;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.5)
+        );
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+        opacity: 1 !important;
+        transform: none !important;
+        border-radius: 0;
+      "
+    >
+      <!-- Imagem de fundo -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #1e1a16;
+          background-image: url(&quot;Capa.jpeg&quot;);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          z-index: 0;
+        "
+      ></div>
+
+      <!-- Overlay escuro para contraste do texto -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(
+            circle at center,
+            transparent 30%,
+            rgba(0, 0, 0, 0.4) 100%
+          );
+          pointer-events: none;
+          z-index: 1;
+        "
+      ></div>
+
+      <!-- Conteúdo da capa -->
+      <div
+        style="position: relative; z-index: 2; max-width: 900px; padding: 20px"
+      >
+        <!-- Nome da Noiva -->
+        <h1
+          style="
+            font-family: &quot;Parisienne&quot;, cursive;
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            margin-bottom: 15px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+            letter-spacing: 2px;
+            color: #ffffff;
+          "
+        >
+          Neyvalda
+        </h1>
+
+        <!-- Separador & -->
+        <div
+          style="
+            font-family: &quot;Great Vibes&quot;, cursive;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 10px 0;
+            color: #c9a03d;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+          "
+        >
+          &
+        </div>
+
+        <!-- Nome do Noivo -->
+        <h1
+          style="
+            font-family: &quot;Parisienne&quot;, cursive;
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            margin-bottom: 15px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+            letter-spacing: 2px;
+            color: #ffffff;
+          "
+        >
+          Jorge
+        </h1>
+
+        <!-- Data -->
+        <p
+          style="
+            font-family: &quot;Cormorant Garamond&quot;, serif;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            margin-top: 30px;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #fff;
+          "
+        >
+          10 de Outubro de 2026
+        </p>
+
+        <!-- Botão Abrir Convite -->
+        <button
+          id="btnAbrirConvite"
+          style="
+            background: transparent;
+            color: #fff;
+            border: 2px solid #c9a03d;
+            padding: 16px 40px;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            border-radius: 50px;
+            margin-top: 50px;
+            cursor: pointer;
+            font-family: &quot;Cormorant Garamond&quot;, serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+          "
+        >
+          Abrir Convite
+        </button>
+      </div>
+    </section>
+    </section>
+
+    <audio id="musicaFundo" src="musica.mp3" loop preload="auto"></audio>
+
+    <div class="convite-wrapper">
+      <!-- ===== PÁGINA 1 — FOTO DIVIDIDA ===== -->
+      <section class="page-inicial">
+        <div class="monogram">N J</div>
+        <div class="photo-area">
+          <div class="slice left"><img src="foto1.jpg" alt="" /></div>
+          <div class="slice center"><img src="foto1.jpg" alt="" /></div>
+          <div class="slice right"><img src="foto1.jpg" alt="" /></div>
+        </div>
+        <div class="names">Neyvalda &amp; Jorge</div>
+        <div class="date">10 de Outubro de 2026</div>
+      </section>
+
+      <!-- ===== PÁGINA 2 — VERSÍCULO + OS NOIVOS ===== -->
+      <section class="secao secao-versiculo-noivos">
+        <div class="conteudo-secao">
+          <div class="verso-wrapper">
+            <p class="verso">
+              “Agora, permanecem a fé, a esperança e o amor.<br />
+              Porém o maior destes é o amor.”
+              <span class="referencia">1 Coríntios 13:13</span>
+            </p>
+          </div>
+
+          <div class="photo-card-arco">
+            <img src="foto2.jpg" alt="Neyvalda e Jorge" />
+            <div
+              class="overlay-info-noivos"
+              style="background: none; display: block"
+            >
+              <!-- Apenas a foto, sem overlay de texto -->
+            </div>
+          </div>
+          <p class="texto-final-noivos">
+            Com alegria, amor e gratidão a Deus,<br />
+            estamos prestes a viver um dos momentos<br />
+            mais especiais das nossas vidas.<br />
+            E queremos partilhá-lo consigo.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 3 — OS NOIVOS ===== -->
+      <section
+        class="secao secao-noivos"
+        style="padding: 4% 5% 4%; background: #f5f2ec"
+      >
+        <div class="conteudo-secao">
+          <h2>Os Noivos</h2>
+          <div class="photo-card-arco">
+            <img src="foto4.jpg" alt="Neyvalda e Jorge" />
+            <div class="overlay-info-noivos">
+              <div class="noiva">
+                <span class="nome-overlay">Neyvalda</span>
+                <div class="linha-overlay"></div>
+                <p class="pais-overlay">
+                  <strong>Filha de:</strong><br />
+                  Amândio Zeferino Amós<br />e<br />
+                  Maria Antónia Nhampulo Amós
+                </p>
+              </div>
+              <i class="coracao-overlay">❤</i>
+              <div class="noivo">
+                <span class="nome-overlay">Jorge</span>
+                <div class="linha-overlay"></div>
+                <p class="pais-overlay">
+                  <strong>Filho de:</strong><br />
+                  Flávio Jorge Lizo<br />e<br />
+                  Lucinda Isabel Mangue Lizo
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 4 — CONVITE + CALENDÁRIO ===== -->
+      <section class="secao secao-cerimonias">
+        <div class="conteudo-secao">
+          <div class="blessing">
+            Sob a Graça e a Bênção de Deus e dos nossos pais,
+          </div>
+
+          <div class="parents">
+            <div>
+              Maria Antónia Nhampulo Amós
+              <span class="amp">&amp;</span>
+              Amândio Zeferino Amós
+            </div>
+            <div>
+              Lucinda Isabel Mangue Lizo
+              <span class="amp">&amp;</span>
+              Flávio Jorge Lizo
+            </div>
+          </div>
+
+          <div class="invitation">
+            Temos a honra e a alegria de convidá-lo(a) para celebrar connosco<br />
+            o nosso enlace matrimonial:
+            <div class="weekday">SÁBADO</div>
+            <div class="wedding-date">10 • 10 • 2026</div>
+          </div>
+
+          <div class="calendario-container-convite">
+            <div class="calendario-pequeno-convite">
+              <div class="cabecalho-calendario-convite">Outubro 2026</div>
+              <div class="dias-calendario-convite">
+                <div class="dia-semana-convite">Dom</div>
+                <div class="dia-semana-convite">Seg</div>
+                <div class="dia-semana-convite">Ter</div>
+                <div class="dia-semana-convite">Qua</div>
+                <div class="dia-semana-convite">Qui</div>
+                <div class="dia-semana-convite">Sex</div>
+                <div class="dia-semana-convite">Sáb</div>
+                <div class="dia-numero-convite dia-vazio-convite"></div>
+                <div class="dia-numero-convite dia-vazio-convite"></div>
+                <div class="dia-numero-convite dia-vazio-convite"></div>
+                <div class="dia-numero-convite dia-vazio-convite"></div>
+                <div class="dia-numero-convite">1</div>
+                <div class="dia-numero-convite">2</div>
+                <div class="dia-numero-convite">3</div>
+                <div class="dia-numero-convite">4</div>
+                <div class="dia-numero-convite">5</div>
+                <div class="dia-numero-convite">6</div>
+                <div class="dia-numero-convite">7</div>
+                <div class="dia-numero-convite">8</div>
+                <div class="dia-numero-convite">9</div>
+                <div class="dia-numero-convite dia-casamento-convite">10</div>
+                <div class="dia-numero-convite">11</div>
+                <div class="dia-numero-convite">12</div>
+                <div class="dia-numero-convite">13</div>
+                <div class="dia-numero-convite">14</div>
+                <div class="dia-numero-convite">15</div>
+                <div class="dia-numero-convite">16</div>
+                <div class="dia-numero-convite">17</div>
+                <div class="dia-numero-convite">18</div>
+                <div class="dia-numero-convite">19</div>
+                <div class="dia-numero-convite">20</div>
+                <div class="dia-numero-convite">21</div>
+                <div class="dia-numero-convite">22</div>
+                <div class="dia-numero-convite">23</div>
+                <div class="dia-numero-convite">24</div>
+                <div class="dia-numero-convite">25</div>
+                <div class="dia-numero-convite">26</div>
+                <div class="dia-numero-convite">27</div>
+                <div class="dia-numero-convite">28</div>
+                <div class="dia-numero-convite">29</div>
+                <div class="dia-numero-convite">30</div>
+                <div class="dia-numero-convite">31</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="save-date">
+            Reserve esta data para celebrar connosco o amor, a<br />
+            união e o início de um novo capítulo das nossas vidas.
+          </div>
+
+          <button class="btn-add-calendario" onclick="adicionarAoCalendario()">
+            + Adicionar ao Calendário
+          </button>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 5 — LOCAIS DAS CERIMÓNIAS ===== -->
+      <section class="secao secao-eventos">
+        <div class="conteudo-secao">
+          <div class="cards-cerimonias">
+            <article class="event-card reveal-left">
+              <div class="event-icon">
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                  <path
+                    d="M20 82h60M28 82V45l22-22 22 22v37M40 82V56h20v26M35 48h30M50 23V12M45 17h10"
+                  />
+                  <path d="M36 41l14-14 14 14M33 60h6v12h-6zM61 60h6v12h-6z" />
+                </svg>
+              </div>
+              <div class="event-title">Cerimónia Religiosa</div>
+              <div class="event-place">
+                Igreja Nossa Senhora do Rosário<br />Cidade de Maputo
+              </div>
+              <div class="event-desc">
+                Será perante Deus, familiares e amigos que receberemos a bênção
+                para iniciarmos a nossa vida matrimonial.
+              </div>
+              <div class="event-time">10h00</div>
+
+              <a
+                class="btn-local"
+                href="https://maps.app.goo.gl/RyAu37USgrYT9NXJ7?g_st=iw"
+                target="_blank"
+                rel="noopener"
+                >VER LOCALIZAÇÃO</a
+              >
+            </article>
+
+            <article class="event-card reveal-right">
+              <div class="event-title">Cerimónia Civil &amp; Recepção</div>
+              <div class="civil-grid">
+                <div>
+                  <div class="civil-icon">
+                    <svg viewBox="0 0 100 100" aria-hidden="true">
+                      <circle cx="42" cy="58" r="23" />
+                      <circle cx="61" cy="58" r="23" />
+                      <path d="M32 25l10-9 11 5-7 12zM32 25l14 8M42 16l4 17" />
+                    </svg>
+                  </div>
+                  <strong>Cerimónia Civil</strong>
+                  <div class="event-time">13h00</div>
+                </div>
+                <div>
+                  <div class="civil-icon">
+                    <svg viewBox="0 0 100 100" aria-hidden="true">
+                      <path
+                        d="M32 20h18l-3 30c-1 9-6 14-12 14s-11-5-12-14zM35 64v14M25 78h20"
+                      />
+                      <path
+                        d="M51 20h18l8 30c2 9-2 14-8 14s-12-5-14-14zM69 64l4 14M62 78h22"
+                      />
+                    </svg>
+                  </div>
+                  <strong>Copo de Água</strong>
+                  <div class="event-time">14h00</div>
+                </div>
+              </div>
+              <div class="event-place">Salão Evelyn Eventos</div>
+              <div class="event-desc">
+                Após a cerimónia religiosa, teremos a alegria de continuar esta
+                celebração consigo.
+              </div>
+
+              <a
+                class="btn-local"
+                href="https://maps.app.goo.gl/sHZt49VrZsNtDfCA7?g_st=iw"
+                target="_blank"
+                rel="noopener"
+                >VER LOCALIZAÇÃO</a
+              >
+            </article>
+          </div>
+
+          <div class="message-title">Uma Mensagem Para Si</div>
+          <div class="message">
+            Família &amp; Amigos<br />
+            Se recebeu este convite, é porque ocupa um lugar especial<br />
+            nos nossos corações e faz parte da nossa história. ❤️
+            <strong>
+              A sua presença será uma honra e uma alegria para nós.<br />
+              Com carinho,<br />
+              Neyvalda &amp; Jorge ❤️
+            </strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 5 — PROGRAMA (timeline) ===== -->
+      <section class="secao secao-programa">
+        <div class="conteudo-secao">
+          <h2>Nosso Programa</h2>
+          <div class="timeline">
+            <div class="timeline-item from-left">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <path
+                      d="M20 82h60M28 82V45l22-22 22 22v37M40 82V56h20v26M35 48h30M50 23V12M45 17h10"
+                    />
+                    <path
+                      d="M36 41l14-14 14 14M33 60h6v12h-6zM61 60h6v12h-6z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-label">
+                  Igreja<span class="timeline-time">10:00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item from-right">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-label">
+                  Cerimónia Civil<span class="timeline-time">13:00</span>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="42" cy="58" r="23" />
+                    <circle cx="61" cy="58" r="23" />
+                    <path d="M32 25l10-9 11 5-7 12zM32 25l14 8M42 16l4 17" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item from-left">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <rect x="18" y="30" width="64" height="46" rx="4" />
+                    <circle cx="50" cy="53" r="15" />
+                    <path d="M34 30l5-8h22l5 8M25 37h10M70 37h5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-label">
+                  Sessão de fotos<span class="timeline-time">13:30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item from-right">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-label">
+                  Copo de água<span class="timeline-time">14:00</span>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <path
+                      d="M32 20h18l-3 30c-1 9-6 14-12 14s-11-5-12-14zM35 64v14M25 78h20"
+                    />
+                    <path
+                      d="M51 20h18l8 30c2 9-2 14-8 14s-12-5-14-14zM69 64l4 14M62 78h22"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item from-left">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <path
+                      d="M25 54h50v26H25zM31 42h38v12H31zM38 32h24v10H38z"
+                    />
+                    <path
+                      d="M33 61c4-5 8-5 12 0s8 5 12 0 8-5 12 0M50 32v-9M46 23c0-5 4-8 4-8s4 3 4 8"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-label">
+                  Corte de Bolo<span class="timeline-time">14:25</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item from-right">
+              <span class="timeline-dot"></span>
+              <div class="timeline-side left">
+                <div class="timeline-label">
+                  Abertura de sala<span class="timeline-time">17:00</span>
+                </div>
+              </div>
+              <div class="timeline-side right">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="42" cy="24" r="7" />
+                    <circle cx="62" cy="24" r="7" />
+                    <path
+                      d="M35 34l-12 23 18 17 8-26 8 26 19-17-13-23M41 34h21M48 48l8-7M37 41l10 9M32 74l-6 13M68 74l6 13"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 6 — CONTADOR + RSVP ===== -->
+      <section class="secao secao-contador-rsvp">
+        <div class="conteudo-secao">
+          <h2>Contagem Regressiva</h2>
+
+          <div class="pendulo-wrapper">
+            <div class="photo-card-contador">
+              <img src="foto3.jpg" alt="Neyvalda e Jorge" />
+              <div class="countdown-novo">
+                <div class="box-contador">
+                  <div id="dias" class="number-contador">00</div>
+                  <div class="label-contador">Dias</div>
+                </div>
+                <div class="box-contador">
+                  <div id="horas" class="number-contador">00</div>
+                  <div class="label-contador">Horas</div>
+                </div>
+                <div class="box-contador">
+                  <div id="minutos" class="number-contador">00</div>
+                  <div class="label-contador">Minutos</div>
+                </div>
+                <div class="box-contador">
+                  <div id="segundos" class="number-contador">00</div>
+                  <div class="label-contador">Segundos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Nota importante:</strong>
+            Este convite é intransmissível e não é extensivo a crianças.
+          </div>
+
+          <div class="rsvp-card">
+            <div class="rsvp-icon">📋</div>
+            <div class="rsvp-title">Confirmação de Presença</div>
+            <p class="rsvp-desc">
+              Por favor, preencha os dados abaixo para confirmar a sua presença.
+            </p>
+
+            <form id="formRSVP" class="form-rsvp">
+              <div class="input-group-convite">
+                <label for="rsvpNome">Nome completo</label>
+                <input type="text" id="rsvpNome" required placeholder="O seu nome" />
+              </div>
+
+              <div class="input-group-convite" style="text-align: center">
+                <label>Vai estar presente?</label>
+                <div class="opcoes-rsvp">
+                  <label class="opcao-rsvp">
+                    <input type="radio" name="statusPresenca" value="Sim" required />
+                    <span>✅ Estarei presente</span>
+                  </label>
+                  <label class="opcao-rsvp">
+                    <input type="radio" name="statusPresenca" value="Não" required />
+                    <span>❌ Não poderei estar presente</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="input-group-convite">
+                <label for="rsvpAcompanhantes">Número de acompanhantes</label>
+                <input type="number" id="rsvpAcompanhantes" min="0" value="0" />
+              </div>
+
+              <button type="submit" class="btn-confirm" id="btnRSVPEnviar">CONFIRMAR</button>
+            </form>
+
+            <div id="rsvpSucesso" class="rsvp-sucesso" style="display: none">
+              ✅ Obrigado! A sua confirmação foi recebida.
+            </div>
+
+            <div class="deadline">
+              Prazo para confirmação<br />
+              [Data limite]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 7 — FELICITAÇÕES + DRESS CODE ===== -->
+      <section class="secao secao-felicidades">
+        <div class="conteudo-secao">
+          <div class="congrats">
+            <div class="congrats-title">FELICITAÇÕES</div>
+            <div class="congrats-subtitle">Deixe-nos uma mensagem ❤️</div>
+            <p class="congrats-text">
+              Queremos guardar não apenas as fotografias deste dia, mas também
+              as palavras e os desejos das pessoas que fazem parte da nossa
+              história.<br />
+              Deixe aqui a sua mensagem, conselho ou felicitação aos noivos.
+            </p>
+          </div>
+
+          <div class="mensagens-card-convite">
+            <div class="form-mensagem-convite">
+              <div class="input-group-convite">
+                <label for="nomeMensagemConvite">O seu nome</label>
+                <input
+                  type="text"
+                  id="nomeMensagemConvite"
+                  placeholder="Digite o seu nome"
+                />
+              </div>
+              <div class="input-group-convite">
+                <label for="relacaoMensagemConvite">A sua relação</label>
+                <select id="relacaoMensagemConvite">
+                  <option value="">Selecione uma opção</option>
+                  <option value="Família">Família</option>
+                  <option value="Amigo(a)">Amigo(a)</option>
+                  <option value="Colega de trabalho">Colega de trabalho</option>
+                  <option value="Padrinho/Madrinha">Padrinho/Madrinha</option>
+                  <option value="Convidado(a) especial">
+                    Convidado(a) especial
+                  </option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+              <div class="input-group-convite">
+                <label for="textoMensagemConvite">A sua mensagem</label>
+                <textarea
+                  id="textoMensagemConvite"
+                  placeholder="Escreva a sua mensagem aqui..."
+                ></textarea>
+              </div>
+              <button class="btn-enviar-convite" id="btnEnviarMensagemConvite">
+                Enviar Mensagem
+              </button>
+            </div>
+
+            <div
+              id="mensagensListaConvite"
+              class="mensagens-lista-convite"
+            ></div>
+          </div>
+
+          <div class="dress-card">
+            <div class="dress-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M18 22h20l8 10-8 12v35H20V44l-8-12z" />
+                <path d="M28 22v57M22 32h12M23 48h10" />
+              </svg>
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M39 20h22l3 15 11 18 8 28H17l8-28 11-18z" />
+                <path d="M39 20l11 15 11-15M31 49h38" />
+              </svg>
+            </div>
+            <div class="dress-title">Dress Code</div>
+            <div class="dress-copy">
+              Pedimos gentilmente aos nossos convidados<br />
+              que evitem estas cores.
+            </div>
+            <div class="color-swatches">
+              <span class="swatch brown" aria-label="Castanho"></span>
+              <span class="swatch white" aria-label="Branco"></span>
+            </div>
+            <div class="swatch-label">Castanho e Branco</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PÁGINA 8 — PRESENTES ===== -->
+      <section class="secao secao-presentes">
+        <div class="conteudo-secao">
+          <div class="gift-card">
+            <div class="gift-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="18" y="36" width="64" height="44" rx="2" />
+                <rect x="14" y="28" width="72" height="14" rx="2" />
+                <path d="M50 28v52M18 49h64" />
+                <path d="M50 28c-10-15-25-14-25-4 0 7 9 9 25 4z" />
+                <path d="M50 28c10-15 25-14 25-4 0 7-9 9-25 4z" />
+                <path d="M50 28l-10 16M50 28l10 16" />
+              </svg>
+            </div>
+            <div class="gift-title">Presentes de Casamento</div>
+            <div class="gift-copy">
+              A sua presença é o nosso maior presente.<br />
+              No entanto, caso queira agraciar-nos com um<br />
+              presente, preparámos algumas sugestões que<br />
+              poderão ajudá-lo(a) na escolha.
+            </div>
+            <a
+              class="btn-contact"
+              id="giftContactBtn"
+              href="https://wa.me/258847673866?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20sugest%C3%B5es%20de%20presentes%20de%20casamento."
+              target="_blank"
+              rel="noopener"
+              >CONTACTO</a
+            >
+            <div class="gift-footer">
+              O mais importante para nós será poder celebrar<br />
+              este momento ao seu lado.<br />
+              Com amor,
+            </div>
+          </div>
+
+                  <div class="signature">
+            <div class="signature-names">Neyvalda &amp; Jorge</div>
+            <div class="signature-date">10 • 10 • 2026</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RODAPÉ ===== -->
+      <section class="secao secao-rodape">
+        <div class="conteudo-secao rodape-conteudo">
+          <p class="rodape-texto">
+            Um convite digital para o casamento de
+            <strong class="rodape-nomes">Neyvalda &amp; Jorge</strong>
+          </p>
+
+          <img src="logoCD.jpg" alt="Convites Dourados MZ" class="rodape-logo" />
+
+          
+            <a href="https://www.instagram.com/convitedouradomz"
+            target="_blank"
+            rel="noopener"
+            class="rodape-instagram"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            @convitedouradomz
+          </a>
+
+          <p class="rodape-copyright">© Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </div>
+
+    <script>
+  
+      (function () {
+        document.body.style.overflow = "hidden";
+        // ===== OBSERVADORES PARA ANIMAÇÕES DE SCROLL =====
+        const secoes = document.querySelectorAll(
+          ".secao-versiculo-noivos, .secao-noivos, .secao-cerimonias, .secao-eventos, .secao-programa, .secao-contador-rsvp, .secao-felicidades, .secao-presentes",
+        );
+        const secaoObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
+
+        secoes.forEach((sec) => secaoObserver.observe(sec));
+
+        // ===== CARDS DE EVENTOS (cerimónias) =====
+        const eventCards = document.querySelectorAll(".event-card");
+        const eventCardObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                eventCardObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.35, rootMargin: "0px 0px -12% 0px" },
+        );
+
+        eventCards.forEach((card) => eventCardObserver.observe(card));
+
+        // ===== TIMELINE (programa) =====
+        const timelineItems = document.querySelectorAll(".timeline-item");
+        const timelineObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                timelineObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.45 },
+        );
+
+        timelineItems.forEach((item) => timelineObserver.observe(item));
+
+        // ===== CONTAGEM DECRESCENTE =====
+        const weddingDate = new Date("2026-10-10T10:00:00");
+
+        function updateCountdown() {
+          const now = new Date();
+          let diff = weddingDate - now;
+          if (diff < 0) diff = 0;
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((diff / (1000 * 60)) % 60);
+          const seconds = Math.floor((diff / 1000) % 60);
+
+          document.getElementById("dias").textContent = String(days).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("horas").textContent = String(hours).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("minutos").textContent = String(
+            minutes,
+          ).padStart(2, "0");
+          document.getElementById("segundos").textContent = String(
+            seconds,
+          ).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Botão de contacto já tem o link WhatsApp definido
+      })();
+      // ===== BOTÃO ABRIR CONVITE (CAPA) =====
+      const btnAbrirConvite = document.getElementById("btnAbrirConvite");
+      const secaoCapa = document.getElementById("capa");
+      const conviteWrapper = document.querySelector(".convite-wrapper");
+
+           if (btnAbrirConvite) {
+        btnAbrirConvite.addEventListener("click", function () {
+          document.body.classList.add("convite-aberto"); // ← adiciona esta linha
+
+          // Tocar a música
+          const musica = document.getElementById("musicaFundo");
+          if (musica) {
+            musica.volume = 0.4;
+            musica.play().catch(function (err) {
+              console.log("Não foi possível tocar a música automaticamente:", err);
+            });
+          }
+
+          // Esconder a capa com fade
+          secaoCapa.style.opacity = "0";
+          secaoCapa.style.transition = "opacity 0.8s ease";
+
+          // Remover a capa após o fade
+
+          setTimeout(() => {
+            secaoCapa.style.display = "none";
+            document.body.style.overflow = "auto"; // ← adiciona esta linha
+          }, 800);
+          // Scroll suave para o topo do conteúdo
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 300);
+        });
+      }
+      function adicionarAoCalendario() {
+        const titulo = "Casamento de Neyvalda & Jorge";
+        const dataInicio = "20261010T100000";
+        const dataFim = "20261010T180000";
+        const local = "Igreja Nossa Senhora do Rosário, Cidade de Maputo";
+        const descricao = "Cerimónia Religiosa, Cerimónia Civil e Copo de Água";
+        const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(titulo)}&dates=${dataInicio}/${dataFim}&location=${encodeURIComponent(local)}&details=${encodeURIComponent(descricao)}`;
+        window.open(url, "_blank");
+      }
+    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        query,
+        orderBy,
+        onSnapshot,
+      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBW5iArzRd0pUVS2z5JM5N2QIxP1jL1v1Q",
+        authDomain: "rafaelaeromeu-a1929.firebaseapp.com",
+        projectId: "rafaelaeromeu-a1929",
+        storageBucket: "rafaelaeromeu-a1929.firebasestorage.app",
+        messagingSenderId: "319622734793",
+        appId: "1:319622734793:web:60f6000f60bf06cef47e18",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const mensagensRef = collection(db, "mensagens-Neyvalda-Jorge");
+
+      function criarCardMensagem(msg) {
+        return `
+      <div class="mensagem-card-convite">
+        <div class="mensagem-header-convite">
+          <span class="mensagem-autor-convite">${msg.nome}</span>
+          <span class="mensagem-relacao-convite">${msg.relacao}</span>
+        </div>
+        <div class="mensagem-texto-convite">"${msg.texto}"</div>
+        <div class="mensagem-data-convite">${msg.data}</div>
+      </div>`;
+      }
+
+      function renderMensagensConvite(mensagens) {
+        const lista = document.getElementById("mensagensListaConvite");
+        if (!lista) return;
+        if (mensagens.length === 0) {
+          lista.innerHTML =
+            '<div class="sem-mensagens-convite">✨ Seja o primeiro a deixar uma mensagem para os noivos! ✨</div>';
+          return;
+        }
+        lista.innerHTML = mensagens.map(criarCardMensagem).join("");
+      }
+
+      function carregarMensagensConvite() {
+        const q = query(mensagensRef, orderBy("timestamp", "desc"));
+        onSnapshot(q, (snapshot) => {
+          const mensagens = [];
+          snapshot.forEach((doc) => mensagens.push(doc.data()));
+          renderMensagensConvite(mensagens);
+        });
+      }
+
+      const btnEnviar = document.getElementById("btnEnviarMensagemConvite");
+      if (btnEnviar) {
+        btnEnviar.addEventListener("click", async function () {
+          const nome = document
+            .getElementById("nomeMensagemConvite")
+            .value.trim();
+          const relacao = document.getElementById(
+            "relacaoMensagemConvite",
+          ).value;
+          const texto = document
+            .getElementById("textoMensagemConvite")
+            .value.trim();
+
+          if (!nome || !relacao || !texto) {
+            alert("Por favor, preencha todos os campos antes de enviar.");
+            return;
+          }
+
+          try {
+            await addDoc(mensagensRef, {
+              nome,
+              relacao,
+              texto,
+              data: new Date().toLocaleDateString("pt-PT"),
+              timestamp: Date.now(),
+            });
+
+            document.getElementById("nomeMensagemConvite").value = "";
+            document.getElementById("relacaoMensagemConvite").value = "";
+            document.getElementById("textoMensagemConvite").value = "";
+            alert("✅ Mensagem enviada com sucesso! Obrigado. ❤️");
+          } catch (err) {
+            alert("Erro ao enviar mensagem. Tente novamente.");
+            console.error(err);
+          }
+        });
+      }
+
+      window.addEventListener("load", carregarMensagensConvite);
+    </script>
+    <script>
+  document.getElementById('formRSVP').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('formRSVP').style.display = 'none';
+    document.getElementById('rsvpSucesso').style.display = 'block';
+  });
+</script>
+  </body>
+</html>
