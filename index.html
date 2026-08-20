@@ -1619,16 +1619,29 @@
                                       .secao {
                                         padding: 4% 4% 3.5%;
                                         border-radius: 18px;
-                                      }
-                                      .secao-noivos,
-                                      .secao-cerimonias,
-                                      .secao-eventos,
-                                      .secao-programa,
-                                      .secao-contador-rsvp,
-                                      .secao-felicidades,
-                                                                       .secao-presentes {
+                                                                      .secao-noivos,
+                                    .secao-cerimonias,
+                                    .secao-eventos,
+                                    .secao-programa,
+                                    .secao-contador-rsvp,
+                                    .secao-felicidades,
+                                    .secao-presentes {
+                                      border-radius: 0;
+                                      box-shadow: none;
+                                      padding-top: 8%;
+                                      padding-bottom: 8%;
+                                    }
+
+                                    .secao-noivos {
+                                      border-radius: 24px 24px 0 0;
+                                      padding-top: 6%;
+                                    }
+
+                                    .secao-presentes {
                                       border-radius: 0 0 24px 24px;
                                       padding-bottom: 6%;
+                                      aspect-ratio: unset;
+                                      overflow: visible;
                                     }
                                       .secao-noivos {
                                         border-radius: 18px 18px 0 0;
