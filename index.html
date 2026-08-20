@@ -640,25 +640,22 @@
                                       transform: translateX(0);
                                     }
 
-                                    .event-icon {
+                                                                    .event-icon {
                                       display: flex;
                                       justify-content: center;
                                       align-items: center;
                                       gap: 10px;
                                       margin-bottom: 0.2em;
+                                      animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
-                                    .event-icon svg {
+                                .event-icon img {
                                       width: 46px;
                                       height: 46px;
-                                      fill: none;
-                                      stroke: #1e1a16;
-                                      stroke-width: 2.2;
-                                      stroke-linecap: round;
-                                      stroke-linejoin: round;
+                                      object-fit: contain;
                                     }
                                     .event-title {
               font-family: "Great Vibes", cursive;
-              font-size: clamp(26px, 6vw, 40px);
+              font-size: clamp(32px, 7.5vw, 48px);
               line-height: 1.1;
               margin-bottom: 0.15em;
             }
@@ -958,14 +955,10 @@
                                       height: 44px;
                                       margin-bottom: 1px;
                                     }
-                                    .timeline-icon svg {
+                                                                    .timeline-icon img {
                                       width: 38px;
                                       height: 38px;
-                                      fill: none;
-                                      stroke: #1e1a16;
-                                      stroke-width: 2.2;
-                                      stroke-linecap: round;
-                                      stroke-linejoin: round;
+                                      object-fit: contain;
                                     }
 
                                     .timeline-label {
@@ -1220,10 +1213,13 @@
                                       animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.85s forwards;
                                     }
 
-                                    .rsvp-icon {
-                                      font-size: clamp(28px, 6.5vw, 48px);
-                                      line-height: 1;
+                                                                   .rsvp-icon {
+                                      width: clamp(40px, 8vw, 58px);
+                                      height: clamp(40px, 8vw, 58px);
+                                      object-fit: contain;
                                       margin-bottom: 0.05em;
+                                      display: inline-block;
+                                      animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
                                     .rsvp-title {
                                       font-family: "Great Vibes", cursive;
@@ -1233,15 +1229,16 @@
                                       text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
                                     }
 
-                                    .btn-confirm {
-                                      display: inline-block;
-                                      margin-top: 0.15em;
-                                      padding: 0.25em 1.1em;
+                                                 .btn-confirm {
+                                      display: block;
+                                      width: 100%;
+                                      margin-top: 0.5em;
+                                      padding: 0.6em 1.4em;
                                       background: #d9d2c9;
                                       color: #1e1a16;
                                       text-decoration: none;
-                                      font-size: clamp(13px, 3vw, 20px);
-                                      font-weight: 600;
+                                      font-size: clamp(15px, 3.4vw, 21px);
+                                      font-weight: 700;
                                       border-radius: 40px;
                                       transition:
                                         background 0.25s ease,
@@ -1250,6 +1247,7 @@
                                       border: none;
                                       cursor: pointer;
                                       letter-spacing: 0.03em;
+                                      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
                                     }
                                     .btn-confirm:hover {
                                       background: #c9c0b5;
@@ -1395,14 +1393,10 @@
                                       gap: 6px;
                                       margin-bottom: 0.05em;
                                     }
-                                    .dress-icon svg {
-                                      width: 44px;
-                                      height: 44px;
-                                      fill: none;
-                                      stroke: #1e1a16;
-                                      stroke-width: 2.2;
-                                      stroke-linecap: round;
-                                      stroke-linejoin: round;
+                                                                   .dress-icon img {
+                                      width: 50px;
+                                      height: 50px;
+                                      object-fit: contain;
                                     }
                                     .dress-title {
                                       font-family: "Great Vibes", cursive;
@@ -1520,14 +1514,15 @@
                                       animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
                                     }
 
-                                    .gift-icon svg {
+                                           .gift-icon {
+                                      display: flex;
+                                      justify-content: center;
+                                      animation: pulsarIcone 1.8s ease-in-out infinite;
+                                    }
+                                                                 .gift-icon img {
                                       width: 58px;
                                       height: 58px;
-                                      fill: none;
-                                      stroke: #1e1a16;
-                                      stroke-width: 2.2;
-                                      stroke-linecap: round;
-                                      stroke-linejoin: round;
+                                      object-fit: contain;
                                       margin-bottom: 0.05em;
                                     }
                                     .gift-title {
@@ -1544,15 +1539,16 @@
                                       margin: 0.05em 0;
                                     }
 
-                                    .btn-contact {
-                                      display: inline-block;
-                                      margin-top: 0.15em;
-                                      padding: 0.25em 1.1em;
+                                                   .btn-contact {
+                                      display: block;
+                                      width: 100%;
+                                      margin-top: 0.5em;
+                                      padding: 0.6em 1.4em;
                                       background: #d9d2c9;
                                       color: #1e1a16;
                                       text-decoration: none;
-                                      font-size: clamp(12px, 2.8vw, 19px);
-                                      font-weight: 600;
+                                      font-size: clamp(15px, 3.2vw, 21px);
+                                      font-weight: 700;
                                       border-radius: 40px;
                                       transition:
                                         background 0.25s ease,
@@ -1561,6 +1557,7 @@
                                       border: none;
                                       cursor: pointer;
                                       letter-spacing: 0.03em;
+                                      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
                                     }
                                     .btn-contact:hover {
                                       background: #c9c0b5;
@@ -1831,22 +1828,19 @@
                                       border-radius: 0 0 24px 24px;
                                       padding-bottom: 6%;
                                     }
-                                    .civil-icon {
+                                                                   .civil-icon {
                                       display: flex;
                                       justify-content: center;
                                       align-items: center;
                                       margin-bottom: 0.2em;
+                                      animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
-                                    .civil-icon svg {
+                                                             .civil-icon img {
                                       width: 34px;
                                       height: 34px;
-                                      fill: none;
-                                      stroke: #1e1a16;
-                                      stroke-width: 2.2;
-                                      stroke-linecap: round;
-                                      stroke-linejoin: round;
-                                    }
-                                   .secao-felicidades.is-visible .mensagens-card-convite {
+                                      object-fit: contain;
+                                                                       }
+                                    .secao-felicidades.is-visible .mensagens-card-convite {
         animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
       }
             .mensagens-card-convite {
@@ -2348,13 +2342,8 @@
         <div class="conteudo-secao">
           <div class="cards-cerimonias">
             <article class="event-card reveal-left">
-              <div class="event-icon">
-                <svg viewBox="0 0 100 100" aria-hidden="true">
-                  <path
-                    d="M20 82h60M28 82V45l22-22 22 22v37M40 82V56h20v26M35 48h30M50 23V12M45 17h10"
-                  />
-                  <path d="M36 41l14-14 14 14M33 60h6v12h-6zM61 60h6v12h-6z" />
-                </svg>
+                         <div class="event-icon">
+                <img src="igreja.png" alt="Cerimónia Religiosa" />
               </div>
               <div class="event-title">Cerimónia Religiosa</div>
               <div class="event-place">
@@ -2379,26 +2368,15 @@
               <div class="event-title">Cerimónia Civil &amp; Recepção</div>
               <div class="civil-grid">
                 <div>
-                  <div class="civil-icon">
-                    <svg viewBox="0 0 100 100" aria-hidden="true">
-                      <circle cx="42" cy="58" r="23" />
-                      <circle cx="61" cy="58" r="23" />
-                      <path d="M32 25l10-9 11 5-7 12zM32 25l14 8M42 16l4 17" />
-                    </svg>
+                                   <div class="civil-icon">
+                    <img src="alianca.png" alt="Cerimónia Civil" />
                   </div>
                   <strong>Cerimónia Civil</strong>
                   <div class="event-time">13h00</div>
                 </div>
                 <div>
-                  <div class="civil-icon">
-                    <svg viewBox="0 0 100 100" aria-hidden="true">
-                      <path
-                        d="M32 20h18l-3 30c-1 9-6 14-12 14s-11-5-12-14zM35 64v14M25 78h20"
-                      />
-                      <path
-                        d="M51 20h18l8 30c2 9-2 14-8 14s-12-5-14-14zM69 64l4 14M62 78h22"
-                      />
-                    </svg>
+                                    <div class="civil-icon">
+                    <img src="tacas.png" alt="Copo de Água" />
                   </div>
                   <strong>Copo de Água</strong>
                   <div class="event-time">14h00</div>
@@ -2438,19 +2416,12 @@
       <section class="secao secao-programa">
         <div class="conteudo-secao">
           <h2>Nosso Programa</h2>
-          <div class="timeline">
+                   <div class="timeline">
             <div class="timeline-item from-left">
               <span class="timeline-dot"></span>
               <div class="timeline-side left">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <path
-                      d="M20 82h60M28 82V45l22-22 22 22v37M40 82V56h20v26M35 48h30M50 23V12M45 17h10"
-                    />
-                    <path
-                      d="M36 41l14-14 14 14M33 60h6v12h-6zM61 60h6v12h-6z"
-                    />
-                  </svg>
+                  <img src="igreja.png" alt="Igreja" />
                 </div>
               </div>
               <div class="timeline-side right">
@@ -2469,11 +2440,7 @@
               </div>
               <div class="timeline-side right">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <circle cx="42" cy="58" r="23" />
-                    <circle cx="61" cy="58" r="23" />
-                    <path d="M32 25l10-9 11 5-7 12zM32 25l14 8M42 16l4 17" />
-                  </svg>
+                  <img src="alianca.png" alt="Cerimónia Civil" />
                 </div>
               </div>
             </div>
@@ -2482,11 +2449,7 @@
               <span class="timeline-dot"></span>
               <div class="timeline-side left">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <rect x="18" y="30" width="64" height="46" rx="4" />
-                    <circle cx="50" cy="53" r="15" />
-                    <path d="M34 30l5-8h22l5 8M25 37h10M70 37h5" />
-                  </svg>
+                  <img src="camera.png" alt="Sessão de Fotos" />
                 </div>
               </div>
               <div class="timeline-side right">
@@ -2505,14 +2468,7 @@
               </div>
               <div class="timeline-side right">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <path
-                      d="M32 20h18l-3 30c-1 9-6 14-12 14s-11-5-12-14zM35 64v14M25 78h20"
-                    />
-                    <path
-                      d="M51 20h18l8 30c2 9-2 14-8 14s-12-5-14-14zM69 64l4 14M62 78h22"
-                    />
-                  </svg>
+                  <img src="tacas.png" alt="Copo de Água" />
                 </div>
               </div>
             </div>
@@ -2521,14 +2477,7 @@
               <span class="timeline-dot"></span>
               <div class="timeline-side left">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <path
-                      d="M25 54h50v26H25zM31 42h38v12H31zM38 32h24v10H38z"
-                    />
-                    <path
-                      d="M33 61c4-5 8-5 12 0s8 5 12 0 8-5 12 0M50 32v-9M46 23c0-5 4-8 4-8s4 3 4 8"
-                    />
-                  </svg>
+                  <img src="bolo.png" alt="Corte de Bolo" />
                 </div>
               </div>
               <div class="timeline-side right">
@@ -2545,21 +2494,17 @@
                   Abertura de sala<span class="timeline-time">17:00</span>
                 </div>
               </div>
-              <div class="timeline-side right">
+                           <div class="timeline-side right">
                 <div class="timeline-icon">
-                  <svg viewBox="0 0 100 100" aria-hidden="true">
-                    <circle cx="42" cy="24" r="7" />
-                    <circle cx="62" cy="24" r="7" />
-                    <path
-                      d="M35 34l-12 23 18 17 8-26 8 26 19-17-13-23M41 34h21M48 48l8-7M37 41l10 9M32 74l-6 13M68 74l6 13"
-                    />
-                  </svg>
+                  <img src="dança.png" alt="Abertura de Sala" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- ===== PÁGINA 6 — CONTADOR + RSVP ===== -->
 
       <!-- ===== PÁGINA 6 — CONTADOR + RSVP ===== -->
       <section class="secao secao-contador-rsvp">
@@ -2593,7 +2538,7 @@
 
 
           <div class="rsvp-card">
-            <div class="rsvp-icon">📋</div>
+            <img src="confirmar.png" alt="Confirmar Presença" class="rsvp-icon" />
             <div class="rsvp-title">Confirmação de Presença</div>
             <p class="rsvp-desc">
               Por favor, preencha os dados abaixo para confirmar a sua presença.
@@ -2701,15 +2646,8 @@
           </div>
 
           <div class="dress-card">
-            <div class="dress-icon">
-              <svg viewBox="0 0 100 100" aria-hidden="true">
-                <path d="M18 22h20l8 10-8 12v35H20V44l-8-12z" />
-                <path d="M28 22v57M22 32h12M23 48h10" />
-              </svg>
-              <svg viewBox="0 0 100 100" aria-hidden="true">
-                <path d="M39 20h22l3 15 11 18 8 28H17l8-28 11-18z" />
-                <path d="M39 20l11 15 11-15M31 49h38" />
-              </svg>
+                      <div class="dress-icon">
+              <img src="dress.png" alt="Dress Code" />
             </div>
             <div class="dress-title">Dress Code</div>
             <div class="dress-copy">
@@ -2729,15 +2667,8 @@
       <section class="secao secao-presentes">
         <div class="conteudo-secao">
           <div class="gift-card">
-            <div class="gift-icon">
-              <svg viewBox="0 0 100 100" aria-hidden="true">
-                <rect x="18" y="36" width="64" height="44" rx="2" />
-                <rect x="14" y="28" width="72" height="14" rx="2" />
-                <path d="M50 28v52M18 49h64" />
-                <path d="M50 28c-10-15-25-14-25-4 0 7 9 9 25 4z" />
-                <path d="M50 28c10-15 25-14 25-4 0 7-9 9-25 4z" />
-                <path d="M50 28l-10 16M50 28l10 16" />
-              </svg>
+                     <div class="gift-icon">
+              <img src="presente.png" alt="Presentes" />
             </div>
             <div class="gift-title">Presentes de Casamento</div>
             <div class="gift-copy">
