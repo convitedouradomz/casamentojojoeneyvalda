@@ -277,11 +277,11 @@
                                       clip-path: inset(100% 0 0 0);
                                     }
 
-                                    .referencia {
+                                                                       .referencia {
                                       display: block;
                                       margin-top: 0.3em;
                                       font-size: 0.85em;
-                                      font-weight: 500;
+                                      font-weight: 700;
                                       opacity: 0;
                                       transform: translateY(10px);
                                       color: #3d322b;
@@ -369,12 +369,16 @@
                           }
                         }
 
-                                    .photo-card-arco img {
+                                                                      .photo-card-arco img {
                                       width: 100%;
                                       height: 100%;
                                       object-fit: cover;
                                       display: block;
                                       filter: brightness(0.98) contrast(1.02);
+                                    }
+                                    .secao-versiculo-noivos .photo-card-arco img {
+                                      object-fit: contain;
+                                      background: #f0ebe3;
                                     }
 
                                     .overlay-info-noivos {
@@ -519,10 +523,10 @@
                                       gap: 0.7em;
                                     }
 
-                                   .blessing {
-                                      font-size: clamp(18px, 4.4vw, 29px);
-                                      font-weight: 600;
-                                      font-style: italic;
+                                                                     .blessing {
+                                      font-size: clamp(22px, 5.6vw, 36px);
+                                      font-weight: 700;
+                                      font-style: normal;
                                       text-align: center;
                                       margin: 0 0 0.35em;
                                       line-height: 1.4;
@@ -568,15 +572,15 @@
                                       opacity: 0;
                                       transform: translateY(16px);
                                     }
-                                    .weekday {
-                                      font-weight: 600;
-                                      font-size: clamp(18px, 4.2vw, 30px);
+                                                                     .weekday {
+                                      font-weight: 700;
+                                      font-size: clamp(20px, 4.8vw, 34px);
                                       margin-top: 0.15em;
                                       letter-spacing: 0.06em;
                                     }
                                     .wedding-date {
-                                      font-size: clamp(16px, 3.8vw, 26px);
-                                      font-weight: 500;
+                                      font-size: clamp(18px, 4.2vw, 30px);
+                                      font-weight: 700;
                                       margin: 0.08em 0 0.1em;
                                     }
 
@@ -640,7 +644,7 @@
                                       transform: translateX(0);
                                     }
 
-                                                                    .event-icon {
+                                                                                            .event-icon {
                                       display: flex;
                                       justify-content: center;
                                       align-items: center;
@@ -649,9 +653,19 @@
                                       animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
                                 .event-icon img {
-                                      width: 46px;
-                                      height: 46px;
+                                      width: 56px;
+                                      height: 56px;
                                       object-fit: contain;
+                                    }
+                                    @keyframes pulsarIcone {
+                                      0%, 100% {
+                                        transform: scale(1);
+                                        opacity: 0.85;
+                                      }
+                                      50% {
+                                        transform: scale(1.15);
+                                        opacity: 1;
+                                      }
                                     }
                                     .event-title {
               font-family: "Great Vibes", cursive;
@@ -659,10 +673,11 @@
               line-height: 1.1;
               margin-bottom: 0.15em;
             }
-                                   .event-place {
+                                           .event-place {
               font-size: clamp(14px, 3.2vw, 20px);
               line-height: 1.3;
               margin: 0.1em 0;
+              font-weight: 700;
             }
                                 .event-desc {
               font-size: clamp(13px, 2.8vw, 17px);
@@ -682,23 +697,23 @@
                                       width: 100%;
                                       margin: 0.05em 0;
                                     }
-                                  .civil-grid strong {
+                                            .civil-grid strong {
               display: block;
-              font-size: clamp(12px, 2.6vw, 17px);
-              font-weight: 500;
+              font-size: clamp(25px, 6.2vw, 42px);
+              font-weight: 700;
             }
 
-                                    .btn-local {
+                                                                    .btn-local {
                                       display: inline-flex;
                                       align-items: center;
                                       gap: 6px;
                                       margin-top: 0.6em;
-                                      padding: 0.4em 1.2em;
+                                      padding: 0.6em 1.6em;
                                       background: #d9d2c9;
                                       color: #1e1a16;
                                       text-decoration: none;
-                                      font-size: clamp(13px, 2.8vw, 17px);
-                                      font-weight: 600;
+                                      font-size: clamp(16px, 3.6vw, 22px);
+                                      font-weight: 700;
                                       border-radius: 40px;
                                       transition:
                                         background 0.25s ease,
@@ -833,14 +848,14 @@
                     }
                   }
 
-                  .btn-add-calendario {
+                              .btn-add-calendario {
                     display: block;
                     margin: 0.2em auto 0;
-                    padding: 0.35em 1.3em;
+                    padding: 0.55em 1.6em;
                     background: #d9d2c9;
                     color: #1e1a16;
-                    font-size: clamp(13px, 3vw, 18px);
-                    font-weight: 600;
+                    font-size: clamp(16px, 3.8vw, 22px);
+                    font-weight: 700;
                     border-radius: 40px;
                     border: none;
                     cursor: pointer;
@@ -1213,9 +1228,9 @@
                                       animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.85s forwards;
                                     }
 
-                                                                   .rsvp-icon {
-                                      width: clamp(40px, 8vw, 58px);
-                                      height: clamp(40px, 8vw, 58px);
+                                                                                                .rsvp-icon {
+                                      width: clamp(46px, 9vw, 66px);
+                                      height: clamp(46px, 9vw, 66px);
                                       object-fit: contain;
                                       margin-bottom: 0.05em;
                                       display: inline-block;
@@ -1324,18 +1339,21 @@
                                       opacity: 0;
                                       transform: translateY(16px);
                                     }
-                                    .congrats-title {
-                                      font-size: clamp(24px, 5.6vw, 40px);
-                                      font-weight: 700;
-                                      letter-spacing: 0.1em;
-                                      text-transform: uppercase;
+                                                                       .congrats-title {
+                                      font-family: "Great Vibes", cursive;
+                                      font-size: clamp(34px, 8vw, 56px);
+                                      font-weight: 400;
+                                      letter-spacing: 0.02em;
+                                      text-transform: none;
                                       margin: 0;
                                       color: #1e1a16;
+                                      text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
                                     }
                                     .congrats-subtitle {
-                                      font-size: clamp(17px, 4vw, 28px);
+                                      font-size: clamp(14px, 3.2vw, 20px);
                                       line-height: 1.2;
                                       margin-top: 0.05em;
+                                      font-weight: 500;
                                     }
                                     .congrats-text {
                                       font-size: clamp(13px, 3vw, 20px);
@@ -1386,16 +1404,17 @@
                                       animation: fadeUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.35s forwards;
                                     }
 
-                                    .dress-icon {
+                                                                    .dress-icon {
                                       display: flex;
                                       justify-content: center;
                                       align-items: center;
                                       gap: 6px;
                                       margin-bottom: 0.05em;
+                                      animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
                                                                    .dress-icon img {
-                                      width: 50px;
-                                      height: 50px;
+                                      width: 58px;
+                                      height: 58px;
                                       object-fit: contain;
                                     }
                                     .dress-title {
@@ -1520,9 +1539,9 @@
                                       justify-content: center;
                                       animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
-                                                                 .gift-icon img {
-                                      width: 58px;
-                                      height: 58px;
+                                                                                                .gift-icon img {
+                                      width: 66px;
+                                      height: 66px;
                                       object-fit: contain;
                                       margin-bottom: 0.05em;
                                     }
@@ -1540,15 +1559,15 @@
                                       margin: 0.3em 0;
                                     }
 
-                                                   .btn-contact {
+                                                                    .btn-contact {
                                       display: block;
                                       width: 100%;
                                       margin-top: 0.5em;
-                                      padding: 0.6em 1.4em;
+                                      padding: 0.75em 1.4em;
                                       background: #d9d2c9;
                                       color: #1e1a16;
                                       text-decoration: none;
-                                      font-size: clamp(15px, 3.2vw, 21px);
+                                      font-size: clamp(18px, 4vw, 25px);
                                       font-weight: 700;
                                       border-radius: 40px;
                                       transition:
@@ -1671,14 +1690,13 @@
                                         padding: 3% 4% 3.5%;
                                         border-radius: 22px;
                                       }
-                                      .btn-local,
+                                                                        .btn-local,
                                       .btn-confirm,
                                       .btn-wish,
                                       .btn-contact {
-                                        font-size: clamp(9px, 2.2vw, 14px);
-                                        padding: 0.15em 0.7em;
+                                        font-size: clamp(14px, 3.4vw, 19px);
+                                        padding: 0.5em 1.2em;
                                       }
-                                    }
 
                                     @media (max-width: 360px) {
                                       .secao {
@@ -1836,9 +1854,9 @@
                                       margin-bottom: 0.2em;
                                       animation: pulsarIcone 1.8s ease-in-out infinite;
                                     }
-                                                             .civil-icon img {
-                                      width: 34px;
-                                      height: 34px;
+                                                                                              .civil-icon img {
+                                      width: 42px;
+                                      height: 42px;
                                       object-fit: contain;
                                                                        }
                                     .secao-felicidades.is-visible .mensagens-card-convite {
@@ -1906,13 +1924,13 @@
               background: #fff;
             }
 
-            .btn-enviar-convite {
+                     .btn-enviar-convite {
               align-self: center;
-              padding: 0.35em 1.4em;
+              padding: 0.6em 1.8em;
               background: #d9d2c9;
               color: #1e1a16;
-              font-size: clamp(13px, 3vw, 18px);
-              font-weight: 600;
+              font-size: clamp(16px, 3.8vw, 22px);
+              font-weight: 700;
               border-radius: 40px;
               border: none;
               cursor: pointer;
@@ -2421,10 +2439,9 @@
           </div>
 
           <div class="message-title">Uma Mensagem Para Si</div>
-          <div class="message">
-            Família &amp; Amigos<br />
+                    <div class="message">
+            <strong>Família &amp; Amigos</strong><br />
             Se recebeu este convite, é porque ocupa um lugar especial<br />
-            nos nossos corações e faz parte da nossa história. ❤️
             <strong>
               A sua presença será uma honra e uma alegria para nós.<br />
               Com carinho,<br />
@@ -2462,7 +2479,7 @@
               </div>
               <div class="timeline-side right">
                 <div class="timeline-icon">
-                  <img src="alianca.png" alt="Cerimónia Civil" />
+                  <img src="aliancas.png" alt="Cerimónia Civil" />
                 </div>
               </div>
             </div>
