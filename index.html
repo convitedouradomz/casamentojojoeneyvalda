@@ -1991,8 +1991,24 @@
               font-style: italic;
               color: #7a6f63;
             }
-      #botaoMusica:hover {
+      @keyframes pulsarBotaoMusica {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(201, 160, 61, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(201, 160, 61, 0);
+  }
+}
+
+#botaoMusica {
+  animation: pulsarBotaoMusica 1.8s infinite ease-in-out;
+}
+
+#botaoMusica:hover {
   transform: scale(1.1);
+  animation-play-state: paused;
 }
 #botaoMusica:active {
   transform: scale(0.95);
@@ -2151,12 +2167,11 @@
           "
         >
           Abrir Convite
-        </button>
+               </button>
       </div>
     </section>
-    </section>
 
-       <audio id="musicaFundo" src="musica.mp3" loop preload="auto"></audio>
+    <audio id="musicaFundo" src="musica.mp3" loop preload="auto"></audio>
 
     <div id="botaoMusica" style="position: fixed; bottom: 30px; right: 20px; width: 55px; height: 55px; background: linear-gradient(135deg, #c9a03d, #a8842f); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 99999; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
       <svg id="iconeMusica" viewBox="0 0 24 24" width="24" height="24" fill="#fff">
@@ -2622,10 +2637,9 @@
             </div>
           </div>
 
-          <div class="note">
+                    <div class="note">
             <strong>Nota importante:</strong>
             Este convite é intransmissível e não é extensivo a crianças.
-          </div>
           </div>
         </div>
       </section>
@@ -2825,7 +2839,7 @@
 
         // ===== TIMELINE (programa) =====
         const timelineItems = document.querySelectorAll(".timeline-item");
-        const timelineObserver = new IntersectionObserver(
+             const timelineObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
@@ -2834,9 +2848,8 @@
               }
             });
           },
-          { threshold: 0.45 },
+          { threshold: 0.25, rootMargin: "0px 0px -10% 0px" },
         );
-
         timelineItems.forEach((item) => timelineObserver.observe(item));
 
         // ===== CONTAGEM DECRESCENTE =====
