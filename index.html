@@ -645,16 +645,17 @@
                                                               font-weight: 700;
                                                               margin: 0.08em 0 0.1em;
                                                             }
-
                                                             .save-date {
-                                                              font-size: clamp(15px, 3.4cqw, 22px);
-                                                              text-align: center;
+                                                              font-size: clamp(12px, 2.8cqw, 18px);
+                                                              text-align: justify;
                                                               line-height: 1.4;
                                                               margin: 0.1em 0 0.2em;
                                                               opacity: 0;
                                                               transform: translateY(16px);
                                                             }
-                                    .secao-eventos {
+                                                            .linha-savedate {
+                                                              white-space: nowrap;
+                                                            }                                .secao-eventos {
                                                               aspect-ratio: unset;
                                                               overflow: visible;
                                                               padding: 6% 5% 5%;
@@ -1755,7 +1756,7 @@
                                                               gap: 0.05em;
                                                             }
 
-                                                                                       .gift-card {
+                                                                                                                     .gift-card {
                                                               background: #fff;
                                                               padding: 6% 6% 6%;
                                                               border-radius: 28px;
@@ -1767,7 +1768,7 @@
                                                               display: flex;
                                                               flex-direction: column;
                                                               justify-content: space-evenly;
-                                                              gap: 0.9em;
+                                                              gap: 0.3em;
                                                             }
 
                                                             .secao-presentes.is-visible .gift-card {
@@ -1797,9 +1798,9 @@
                                                             .gift-copy {
   font-size: clamp(17px, 4cqw, 25px);
   line-height: 1.75;
-  margin: 0.5em 0;
+  margin: 0;
+  text-align: justify;
 }
-
                                                                                             .btn-contact {
                                                               display: block;
                                                               width: 100%;
@@ -1830,7 +1831,8 @@
                                                    .gift-footer {
   font-size: clamp(15px, 3cqw, 20px);
   line-height: 1.6;
-  margin-top: 0.7em;
+  margin-top: 0;
+  text-align: justify;
 }
 .signature {
   text-align: center;
@@ -2538,6 +2540,7 @@ margin-bottom: 12px;
     color: #fff !important;
   }
 }
+   
     </style>
   </head>
   <body>
@@ -2702,7 +2705,7 @@ margin-bottom: 12px;
       id="botaoMusica"
       style="
         position: fixed;
-        bottom: 30px;
+        bottom: 75px;
         right: 20px;
         width: 55px;
         height: 55px;
@@ -2891,8 +2894,8 @@ margin-bottom: 12px;
             </div>
           </div>
 
-          <div class="save-date">
-            Reserve esta data para celebrar connosco o amor, a<br />
+               <div class="save-date">
+            <span class="linha-savedate">Reserve esta data para celebrar connosco o amor, a</span><br />
             união e o início de um novo capítulo das nossas vidas.
           </div>
 
@@ -3281,27 +3284,14 @@ margin-bottom: 12px;
             <div class="gift-icon">
               <img src="presente.png" alt="Presentes" />
             </div>
-            <div class="gift-title">Presentes de Casamento</div>
+                  <div class="gift-title">Agradecimentos</div>
             <div class="gift-copy">
-              A sua presença é o nosso maior presente.<br />
-              No entanto, caso queira agraciar-nos com um<br />
-              presente, preparámos algumas sugestões que<br />
-              poderão ajudá-lo(a) na escolha.
+              A sua presença é o nosso maior presente.
             </div>
-            <a
-  id="btnListaPresentes"
-  class="btn-contact"
-  href="#"
-  target="_blank"
-  rel="noopener"
->
-  CONTACTO
-</a>
-  
+
             <div class="gift-footer">
-              O mais importante para nós será poder celebrar<br />
-              este momento ao seu lado.<br />
-              Com amor,
+              O mais importante para nós será poder celebrar
+              este momento ao seu lado.
             </div>
           </div>
 
@@ -3503,40 +3493,41 @@ if (messageCardEl) {
   messageCardObserver.observe(messageCardEl);
 }
  // ===== MENU GLASS: APARECE SOMENTE EM PRESENTES =====
-
-// ===== MENU GLASS =====
+// ===== MENU GLASS: APARECE EM AGRADECIMENTOS E FICA FIXO =====
 
 const glassMenu = document.getElementById("glassMenu");
-const secaoPresentes = document.querySelector(".secao-presentes");
+const secaoAgradecimentos = document.querySelector(".secao-presentes");
 
-if (glassMenu && secaoPresentes) {
+if (glassMenu && secaoAgradecimentos) {
 
-  // Tira o menu de dentro do convite e coloca diretamente no body
+  // tira o menu da estrutura do convite e coloca no body
   document.body.appendChild(glassMenu);
 
-  function controlarGlassMenu() {
-    const rect = secaoPresentes.getBoundingClientRect();
+  let glassAtivado = false;
+
+  function verificarGlassMenu() {
+    if (glassAtivado) return;
+
+    const rect = secaoAgradecimentos.getBoundingClientRect();
     const alturaTela =
       window.innerHeight || document.documentElement.clientHeight;
 
-    // Presentes entrou no ecrã
-    const chegouNosPresentes =
-      rect.top < alturaTela * 0.85 &&
-      rect.bottom > 0;
-
-    if (chegouNosPresentes) {
+    // ativa quando Agradecimentos entra no ecrã
+    if (rect.top < alturaTela * 0.8) {
+      glassAtivado = true;
       glassMenu.classList.add("visible");
-    } 
+    }
   }
 
-  window.addEventListener("scroll", controlarGlassMenu, {
+  window.addEventListener("scroll", verificarGlassMenu, {
     passive: true
   });
 
-  window.addEventListener("resize", controlarGlassMenu);
+  window.addEventListener("resize", verificarGlassMenu);
 
-  controlarGlassMenu();
+  verificarGlassMenu();
 }
+
 document.querySelectorAll(".glass-menu-item").forEach((item) => {
 
   item.addEventListener("click", () => {
