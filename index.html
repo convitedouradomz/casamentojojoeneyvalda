@@ -3657,13 +3657,21 @@ async function preencherNomeConvidado() {
     }
 
     const dados = documento.data();
+const mesaOriginal = (dados.mesa || "").trim();
 
-    convidadoAtual = {
-      codigo: codigo,
-      nome: dados.nome || "Caro(a) Convidado(a)",
-      mesa: dados.mesa || "A confirmar",
-      pessoas: dados.pessoas || 1
-    };
+const mesaNormalizada =
+  !mesaOriginal
+    ? "A confirmar"
+    : /^mesa\s/i.test(mesaOriginal)
+      ? mesaOriginal
+      : "Mesa " + mesaOriginal;
+
+convidadoAtual = {
+  codigo: codigo,
+  nome: dados.nome || "Caro(a) Convidado(a)",
+  mesa: mesaNormalizada,
+  pessoas: dados.pessoas || 1
+};
 
     const nomeFinal = convidadoAtual.nome;
     const mesaFinal = convidadoAtual.mesa;
