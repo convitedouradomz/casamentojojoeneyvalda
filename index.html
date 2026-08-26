@@ -1405,6 +1405,7 @@
                                                               margin: 0.05em 0 0.05em;
                                                               opacity: 0;
                                                               transform: translateY(16px);
+                                                                visibility: hidden;
                                                             }
                                                             .guest-heading {
                                                               display: block;
@@ -3674,7 +3675,11 @@ async function preencherNomeConvidado() {
 
     if (el1) el1.textContent = nomeFinal;
     if (el2) el2.textContent = nomeFinal;
+const guestInfo = document.querySelector(".guest-info");
 
+if (guestInfo) {
+  guestInfo.style.visibility = "visible";
+}
 
     // ===== MESA NA ÁREA PRINCIPAL =====
 
@@ -3747,7 +3752,6 @@ Assinado: ${nomeFinal}`;
   }
 }
 
-window.addEventListener("load", preencherNomeConvidado);
 
       function adicionarAoCalendario() {
         const titulo = "Casamento de Neyvalda & Jorge";
@@ -3827,6 +3831,7 @@ if (mesaEl) mesaEl.classList.add("persiana-mesa");
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+  preencherNomeConvidado();
   const mensagensRef = db.collection("mensagens-Neyvalda-Jorge");
 
   function criarCardMensagem(msg) {
