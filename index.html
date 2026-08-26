@@ -6,6 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
     />
+      <meta property="og:type" content="website" />
+<meta property="og:title" content="Neyvalda & Jorge · 10.10.2026" />
+<meta property="og:description" content="Convite para o nosso casamento — 10 de Outubro de 2026." />
+<meta property="og:image" content="https://casamentoneyvaldaejorge.vercel.app/ccapa.jpeg" />
+<meta property="og:url" content="https://casamentoneyvaldaejorge.vercel.app/" />
+<meta name="twitter:card" content="summary_large_image" />
     <title>Neyvalda & Jorge · 10.10.2026</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2787,7 +2793,7 @@ margin-bottom: 12px;
                 <p class="pais-overlay">
                   <strong>Filha de:</strong><br />
                   Amândio Zeferino Amós<br />e<br />
-                  Maria Abelarda Nhampulo Amós
+                  Maria Abelarda Nhapulo Amós
                 </p>
               </div>
               <i class="coracao-overlay">❤</i>
@@ -3257,7 +3263,7 @@ margin-bottom: 12px;
       <path d="M12 7H8.5A2.5 2.5 0 1 1 11 4.5V7" />
       <path d="M12 7h3.5A2.5 2.5 0 1 0 13 4.5V7" />
     </svg>
-    <span>Presentes</span>
+    <span>Agradecimentos</span>
   </button>
 
   <button class="glass-menu-item" data-target=".secao-felicidades">
@@ -3505,18 +3511,25 @@ if (glassMenu && secaoAgradecimentos) {
 
   let glassAtivado = false;
 
-  function verificarGlassMenu() {
-    if (glassAtivado) return;
+ 
+    const secaoRodape = document.querySelector(".secao-rodape");
 
-    const rect = secaoAgradecimentos.getBoundingClientRect();
+  function verificarGlassMenu() {
     const alturaTela =
       window.innerHeight || document.documentElement.clientHeight;
 
-    // ativa quando Agradecimentos entra no ecrã
-    if (rect.top < alturaTela * 0.8) {
-      glassAtivado = true;
-      glassMenu.classList.add("visible");
+    if (!glassAtivado) {
+      const rect = secaoAgradecimentos.getBoundingClientRect();
+      if (rect.top < alturaTela * 0.8) {
+        glassAtivado = true;
+      }
     }
+
+    const rodapeVisivel = secaoRodape
+      ? secaoRodape.getBoundingClientRect().top < alturaTela * 0.85
+      : false;
+
+    glassMenu.classList.toggle("visible", glassAtivado && !rodapeVisivel);
   }
 
   window.addEventListener("scroll", verificarGlassMenu, {
@@ -3610,51 +3623,131 @@ document.querySelectorAll(".glass-menu-item").forEach((item) => {
           }, 300);
         });
       }
-      // ===== NOME DO CONVIDADO (via URL) =====
-  function preencherNomeConvidado() {        const params = new URLSearchParams(window.location.search);
-        const nome = params.get("nome");
-        const mesa = params.get("mesa");
-        const nomeFinal = nome
-          ? decodeURIComponent(nome)
-          : "Caro(a) Convidado(a)";
+      // ===== CONVIDADO VIA CÓDIGO SECRETO / FIREBASE =====
 
-        const el1 = document.getElementById("nomeConvidadoDestaque");
-        const el2 = document.getElementById("nomeConvidadoRSVP");
-        if (el1) el1.textContent = nomeFinal;
-        if (el2) el2.textContent = nomeFinal;
+let convidadoAtual = null;
 
-       const elMesaBox = document.getElementById("mesaConvidado");
-        const elMesaTexto = document.getElementById("mesaConvidadoTexto");
-        if (elMesaBox) elMesaBox.style.display = "flex";
-        if (elMesaTexto)
-          elMesaTexto.textContent = mesa
-            ? "Mesa: " + decodeURIComponent(mesa)
-            : "Mesa: A confirmar";
+async function preencherNomeConvidado() {
 
-        const elMesaBoxRSVP = document.getElementById("mesaConvidadoRSVP");
-        const elMesaTextoRSVP = document.getElementById(
-          "mesaConvidadoRSVPTexto",
-        );
-        if (elMesaBoxRSVP) elMesaBoxRSVP.style.display = "flex";
-        if (elMesaTextoRSVP)
-          elMesaTextoRSVP.textContent = mesa
-            ? "Mesa " + decodeURIComponent(mesa)
-            : "Mesa: A confirmar";
-            const btnListaPresentes = document.getElementById("btnListaPresentes");
+  // Exemplo:
+  // https://casamentoneyvaldaejorge.vercel.app/K8w2Qa
+  // transforma em: K8w2Qa
 
-if (btnListaPresentes) {
-  const mensagemPresentes = `Olá, tudo bem?
+  const codigo = window.location.pathname
+    .replace(/^\/+|\/+$/g, "")
+    .trim();
+
+  // Se abrir apenas o domínio sem código
+  if (!codigo) {
+    console.log("Convite aberto sem código de convidado.");
+    return;
+  }
+
+  try {
+
+    const documento = await db
+      .collection("convidados-Neyvalda-Jorge")
+      .doc(codigo)
+      .get();
+
+    if (!documento.exists) {
+      console.error("Código de convidado não encontrado:", codigo);
+      return;
+    }
+
+    const dados = documento.data();
+
+    convidadoAtual = {
+      codigo: codigo,
+      nome: dados.nome || "Caro(a) Convidado(a)",
+      mesa: dados.mesa || "A confirmar",
+      pessoas: dados.pessoas || 1
+    };
+
+    const nomeFinal = convidadoAtual.nome;
+    const mesaFinal = convidadoAtual.mesa;
+
+    // ===== NOME NA ÁREA PRINCIPAL =====
+
+    const el1 = document.getElementById("nomeConvidadoDestaque");
+    const el2 = document.getElementById("nomeConvidadoRSVP");
+
+    if (el1) el1.textContent = nomeFinal;
+    if (el2) el2.textContent = nomeFinal;
+
+
+    // ===== MESA NA ÁREA PRINCIPAL =====
+
+    const elMesaBox = document.getElementById("mesaConvidado");
+    const elMesaTexto = document.getElementById("mesaConvidadoTexto");
+
+    if (elMesaBox) {
+      elMesaBox.style.display = "flex";
+    }
+
+    if (elMesaTexto) {
+      elMesaTexto.textContent =
+        mesaFinal && mesaFinal !== "A confirmar"
+          ? mesaFinal
+          : "Mesa: A confirmar";
+    }
+
+
+    // ===== MESA NA ÁREA RSVP =====
+
+    const elMesaBoxRSVP =
+      document.getElementById("mesaConvidadoRSVP");
+
+    const elMesaTextoRSVP =
+      document.getElementById("mesaConvidadoRSVPTexto");
+
+    if (elMesaBoxRSVP) {
+      elMesaBoxRSVP.style.display = "flex";
+    }
+
+    if (elMesaTextoRSVP) {
+      elMesaTextoRSVP.textContent =
+        mesaFinal && mesaFinal !== "A confirmar"
+          ? mesaFinal
+          : "Mesa: A confirmar";
+    }
+
+
+    // ===== BOTÃO LISTA DE PRESENTES =====
+
+    const btnListaPresentes =
+      document.getElementById("btnListaPresentes");
+
+    if (btnListaPresentes) {
+
+      const mensagemPresentes = `Olá, tudo bem?
 Gostaria de pedir, por favor, a lista de presentes para o Casamento de Neyvalda e Jorge.
 
 Assinado: ${nomeFinal}`;
 
-  btnListaPresentes.href =
-    "https://wa.me/258847673866?text=" +
-    encodeURIComponent(mensagemPresentes);
+      btnListaPresentes.href =
+        "https://wa.me/258847673866?text=" +
+        encodeURIComponent(mensagemPresentes);
+    }
+
+    console.log(
+      "Convidado carregado:",
+      convidadoAtual.nome,
+      "-",
+      convidadoAtual.mesa
+    );
+
+  } catch (erro) {
+
+    console.error(
+      "Erro ao procurar convidado no Firebase:",
+      erro
+    );
+
+  }
 }
-      }
-  
-      window.addEventListener("load", preencherNomeConvidado);
+
+window.addEventListener("load", preencherNomeConvidado);
 
       function adicionarAoCalendario() {
         const titulo = "Casamento de Neyvalda & Jorge";
@@ -3808,53 +3901,62 @@ if (mesaEl) mesaEl.classList.add("persiana-mesa");
   window.addEventListener("load", carregarMensagensConvite);
 </script>
     <script>
-     const btnRSVP = document.getElementById("btnRSVPEnviar");
+    const btnRSVP = document.getElementById("btnRSVPEnviar");
+
 if (btnRSVP) {
   btnRSVP.addEventListener("click", function () {
-    const params = new URLSearchParams(window.location.search);
-    const nomeConvidado = params.get("nome")
-      ? decodeURIComponent(params.get("nome"))
-      : "Convidado sem nome";
-    const mesaConvidado = params.get("mesa")
-      ? decodeURIComponent(params.get("mesa"))
-      : "Sem mesa";
+
+    if (!convidadoAtual) {
+      alert(
+        "Não foi possível identificar o convidado. Por favor, abra novamente o link pessoal do convite."
+      );
+      return;
+    }
+
+    const nomeConvidado = convidadoAtual.nome;
+    const mesaConvidado = convidadoAtual.mesa;
 
     const form = document.createElement("form");
 
-form.method = "POST";
-form.action =
-  "https://docs.google.com/forms/d/e/1FAIpQLSeBtx2ZtOYe6GYkhdlstU-Ng7L95ahFIOAYvdWPFWToEmpOEg/formResponse";
+    form.method = "POST";
+    form.action =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeBtx2ZtOYe6GYkhdlstU-Ng7L95ahFIOAYvdWPFWToEmpOEg/formResponse";
 
-form.target = "googleFormsHiddenFrame";
-form.style.display = "none";
+    form.target = "googleFormsHiddenFrame";
+    form.style.display = "none";
 
-const dados = {
-  "entry.1498135098": nomeConvidado,
-  "entry.573394426": mesaConvidado,
-  "entry.1063763402": "Sim, confirmou"
-};
+    const dados = {
+      "entry.1498135098": nomeConvidado,
+      "entry.573394426": mesaConvidado,
+      "entry.1063763402": "Sim, confirmou"
+    };
 
-Object.entries(dados).forEach(([nome, valor]) => {
-  const input = document.createElement("input");
+    Object.entries(dados).forEach(([nome, valor]) => {
+      const input = document.createElement("input");
 
-  input.type = "hidden";
-  input.name = nome;
-  input.value = valor;
+      input.type = "hidden";
+      input.name = nome;
+      input.value = valor;
 
-  form.appendChild(input);
-});
+      form.appendChild(input);
+    });
 
-document.body.appendChild(form);
+    document.body.appendChild(form);
 
-form.submit();
+    form.submit();
 
-setTimeout(() => {
-  form.remove();
-}, 1000);
+    setTimeout(() => {
+      form.remove();
+    }, 1000);
 
     btnRSVP.disabled = true;
     btnRSVP.textContent = "PRESENÇA CONFIRMADA ✓";
-    document.getElementById("rsvpSucesso").style.display = "block";
+
+    const sucesso = document.getElementById("rsvpSucesso");
+
+    if (sucesso) {
+      sucesso.style.display = "block";
+    }
   });
 }
     </script>
